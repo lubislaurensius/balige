@@ -13,7 +13,7 @@
                 <div class="page-header">
                     <h1>
                         {{$title}} <br />
-                        <small>Menambahkan Album Galeri di situs website SMA Negeri 1</small>
+                        <small>Menambahkan Album Galeri di situs website SMA Negeri 2</small>
                     </h1>
                 </div>
                 <!-- end: PAGE TITLE & BREADCRUMB -->

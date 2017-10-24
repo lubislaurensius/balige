@@ -37,7 +37,7 @@
     <!-- start: BODY -->
     <body class="login example2" ng-controller="login">
         <div class="main-login col-sm-4 col-sm-offset-4">
-            <div class="logo">SMA Negeri 2
+            <div class="logo">SMA Negeri 2 Balige
             </div>
             <!-- start: LOGIN BOX -->
             <div>

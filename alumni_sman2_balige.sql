@@ -83,7 +83,7 @@ CREATE TABLE `tbl_data` (
   `content` text NOT NULL,
   `data_id` varchar(10) NOT NULL,
   PRIMARY KEY (`id_data`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
 /*Table structure for table `tbl_download` */
 
@@ -189,7 +189,7 @@ CREATE TABLE `tbl_pengumuman` (
   `tanggal` date NOT NULL,
   `penulis` varchar(100) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id_pengumuman`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 /*Table structure for table `tbl_pesan` */
 
@@ -212,8 +212,11 @@ DROP TABLE IF EXISTS `tbl_siswa`;
 CREATE TABLE `tbl_siswa` (
   `id_siswa` int(10) NOT NULL AUTO_INCREMENT,
   `id_kelas` int(10) NOT NULL,
-  `nis` int(30) NOT NULL,
-  `nama_siswa` varchar(150) NOT NULL,
+  `nama_siswa` varchar(150) DEFAULT NULL,
+  `alamat` varchar(200) DEFAULT NULL,
+  `status` varchar(200) DEFAULT NULL,
+  `no_hp` varchar(13) DEFAULT NULL,
+  `alamat_email` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_siswa`)
 ) ENGINE=MyISAM AUTO_INCREMENT=568 DEFAULT CHARSET=latin1;
 
