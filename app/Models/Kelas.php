@@ -22,10 +22,10 @@ class Kelas extends Model {
 
     public function scopeDropdownKelas($query) {
         $data = array();
-        $eselon = $query->select(array('id_kelas', 'nama_kelas'))->get();
+        $eselon = $query->select(array('id_kelas', 'nama_kelas', 'tahun_ajaran'))->get();
         if (count($eselon) > 0) {
             foreach ($eselon as $ese) {
-                $data[] = array('id' => $ese->id_kelas, 'label' => $ese->nama_kelas);
+                $data[] = array('id' => $ese->id_kelas, 'label' => $ese->tahun_ajaran);
             }
         }
         return $data;

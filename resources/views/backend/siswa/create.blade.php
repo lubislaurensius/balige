@@ -22,7 +22,7 @@
                     <ul class="nav nav-tabs tab-bricky" id="myTab">
                         <li class="active">
                             <a data-toggle="tab" href="#panel_tab2_example1">
-                                <i class="green fa fa-home"></i> Tambah Siswa
+                                <i class="green fa fa-home"></i> Tambah Alumni
                             </a>
                         </li>
                     </ul>
@@ -31,10 +31,10 @@
                                                    <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
                              <form class="form-horizontal" role="form" name="agendaForm" ng-submit="submit()" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="form-field-1"> Kelas </label>
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Tahun Lulus </label>
                                     <div class="col-sm-9">
                                         <select name="id_kelas" class="form-control" ng-model="data.id_kelas">
-                                            <option value="">Pilih Kelas</option>
+                                            <option value="">Pilih Tahun</option>
                                             <option ng-repeat="unit in kelas" ng-selected="unit.id == {{$id}}" value="<%unit.id%>"><% unit.label %></option>
                                         </select>
                                     </div>
@@ -46,9 +46,18 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="form-field-1"> Nama Siswa </label>
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Nama </label>
                                     <div class="col-sm-9">
                                         <input type='text' class='col-sm-10 form-control' name='nama_siswa' ng-model='data.nama_siswa'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Status </label>
+                                    <div class="col-sm-9">
+                                        <select name="data.id" class="form-control" ng-model="data.status" required>
+                                            <option value="">Pilih Status</option>
+                                            <option ng-repeat="unit in status" value="<% unit.id %>"><% unit.label %></option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">

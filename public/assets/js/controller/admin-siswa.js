@@ -45,6 +45,8 @@ angular.module('admin').controller('siswa', function($scope, $http, $filter, $ti
 angular.module('admin').controller('siswacreate', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
     $scope.alerts = [];
+    $scope.jk = [{'id': 'L', 'label': 'Laki Laki'}, {'id': 'P', 'label': 'Perempuan'}];
+    $scope.status = [{'id': 'kawin', 'label': 'Menikah'}, {'id': 'belum_kawin', 'label': 'Belum Menikah'}];
     $scope.closeAlert = function(index) {
         $scope.alerts.splice(index, 1);
     };
@@ -75,6 +77,8 @@ angular.module('admin').controller('siswacreate', function($scope, $http, $filte
 angular.module('admin').controller('siswaedit', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
     $scope.alerts = [];
+    $scope.jk = [{'id': 'L', 'label': 'Laki Laki'}, {'id': 'P', 'label': 'Perempuan'}];
+    $scope.status = [{'id': 'kawin', 'label': 'Menikah'}, {'id': 'belum_kawin', 'label': 'Belum Menikah'}];
     $scope.closeAlert = function(index) {
         $scope.alerts.splice(index, 1);
     };
