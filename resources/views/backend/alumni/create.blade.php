@@ -1,10 +1,7 @@
 @extends('backend/templates/index')
-@section('css')
-<link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-datepicker/css/datepicker.css')}}">
-@stop
 @section('js')
 <script src='{{asset('assets/js/controller/admin-alumni.js')}}'>
-    $('#tanggal_lahir').datepicker()  </script>
+</script>
 @stop
 @section('content')
 
@@ -60,7 +57,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Tanggal Lahir</label>
                                     <div class="col-sm-9">
-                                        <input id='tanggal_lahir' type='text' class='col-sm-10 form-control' name='tanggal_lahir' ng-model='data.tanggal_lahir'/>
+                                        <input id='datepicker'  type='text' class='col-sm-10 form-control' name='lappet' ng-model='$parent.checkOut'/>
                                     </div>
                                 </div>
                                 <div class="form-group">

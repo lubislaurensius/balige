@@ -26,6 +26,8 @@
         <link rel="stylesheet" href="{{asset('assets/css/theme_light.css')}}" type="text/css" id="skin_color">
         <link rel="stylesheet" href="{{asset('assets/css/print.css')}}" type="text/css" media="print"/>
         <link rel="stylesheet" href="{{asset('assets/css/angular-block-ui.min.css')}}" type="text/css" id="skin_color">
+        <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-datepicker/css/datepicker.css')}}">
+
         <!--[if IE 7]>
         <link rel="stylesheet" href="{{asset('assets/plugins/font-awesome/css/font-awesome-ie7.min.css')}}">
         <![endif]-->
@@ -73,6 +75,10 @@
                     jQuery(document).ready(function() {
             CKEDITOR.disableAutoInline = true;
                     $('textarea.ckeditor').ckeditor();
+                    $('#datepicker').datepicker({format: 'yyyy-dd-mm',}).on('changeDate', function (ev) {
+                    $(this).datepicker('hide');
+                    });;
+
                     $(".group1").colorbox({
             rel: 'group1',
                     transition: "none",
@@ -80,7 +86,9 @@
                     height: "100%",
                     retinaImage: true
             });
-            });</script>
+            });
+
+        </script>
         <script src='{{asset('assets/js/angular.min.js')}}'></script>
         <script src='{{asset('assets/js/ui-bootstrap-tpls-0.12.0.min.js')}}'></script>
         <script src='{{asset('assets/js/angular-file-upload.min.js')}}'></script>

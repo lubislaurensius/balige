@@ -56,7 +56,7 @@
                                     <td class="center">
                                         <div class="visible-md visible-lg hidden-sm hidden-xs">
                                             <a data-original-title="Edit" data-placement="top" class="btn btn-xs btn-teal tooltips" href="{{url('admin/alumni/')}}/<% status['id']%>/edit"><i class="fa fa-edit"></i></a>
-                                            <a data-original-title="Remove" data-placement="top" class="btn btn-xs btn-bricky tooltips" href="#" ng-click="delete(status['id'])"><i class="fa fa-times fa fa-white"></i></a>
+                                            <a data-original-title="Remove" data-placement="top" class="btn btn-xs btn-bricky tooltips" href="#" ng-click="delete(status['id'],status['id_angkatan'])"><i class="fa fa-times fa fa-white"></i></a>
                                         </div>
                                         <div class="visible-xs visible-sm hidden-md hidden-lg">
                                             <div class="btn-group">

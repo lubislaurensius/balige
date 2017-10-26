@@ -26,11 +26,12 @@ angular.module('admin').controller('alumni', function($scope, $http, $filter, $t
             $scope.numPerPage = 15;
         }, true);
     })
-    $scope.delete = function(id) {
+    $scope.delete = function(id, id_angkatan) {
+        console.log(id_angkatan);
         if (confirm("Anda yakin untuk menghapus data?") === true) {
             $http.delete(baseURL.url('admin/alumni/') + id ).success(function(data) {
                 if (data.success) {
-                    $http.get(baseURL.url('admin/angkatan/') + angkatan_id + '/alumni').success(function(data) {
+                    $http.get(baseURL.url('api/angkatan/') + angkatan_id + '/alumni').success(function(data) {
                         $scope.data = data;
                         $scope.alerts.push({type: 'success', msg: 'Data Berhasil Dihapus'});
                         $timeout(function() {
@@ -44,6 +45,7 @@ angular.module('admin').controller('alumni', function($scope, $http, $filter, $t
 });
 angular.module('admin').controller('alumnicreate', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
+    $scope.parent = {checkOut:''};
     $scope.alerts = [];
     $scope.agama = [{'id': 'islam', 'label': 'Islam'}, {'id': 'kristen', 'label': 'Kristen'}, {'id': 'hindu', 'label': 'Hindu'}, {'id': 'budha', 'label': 'Budha'}, {'id': 'katolik', 'label': 'Katolik'}];
     $scope.status = [{'id': 'menikah', 'label': 'Menikah'}, {'id': 'lajang', 'label': 'Belum Menikah'}];
@@ -57,6 +59,7 @@ angular.module('admin').controller('alumnicreate', function($scope, $http, $filt
         $scope.kelas = data;
     });
     $scope.submit = function() {
+        lappet = document.getElementById('datepicker').value();
         $http.post(baseURL.url('admin/angkatan/') + id + '/alumni', $scope.data).success(function(data) {
             if (data.success) {
                 window.location.replace(baseURL.url('admin/angkatan/') + $scope.data['id_angkatan'] + '/alumni');
