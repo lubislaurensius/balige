@@ -43,7 +43,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Tanggal Lahir</label>
                                     <div class="col-sm-9">
-                                        <input id='tanggal_lahir' type='text' class='datepicker col-sm-10 form-control' name='tanggal_lahir' ng-model='data.tanggal_lahir'/>
+                                        <input id='datepicker'  type='text' class='col-sm-10 form-control' name='tanggal_lahir' ng-model='data.tanggal_lahir'/>
                                     </div>
                                 </div>
                                 <div class="form-group">

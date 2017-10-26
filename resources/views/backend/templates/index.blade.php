@@ -75,7 +75,7 @@
                     jQuery(document).ready(function() {
             CKEDITOR.disableAutoInline = true;
                     $('textarea.ckeditor').ckeditor();
-                    $('#datepicker').datepicker({format: 'yyyy-dd-mm',}).on('changeDate', function (ev) {
+                    $('#datepicker').datepicker({format: 'yyyy-mm-dd',}).on('changeDate', function (ev) {
                     $(this).datepicker('hide');
                     });;
 

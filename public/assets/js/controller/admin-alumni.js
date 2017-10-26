@@ -59,7 +59,8 @@ angular.module('admin').controller('alumnicreate', function($scope, $http, $filt
         $scope.kelas = data;
     });
     $scope.submit = function() {
-        lappet = document.getElementById('datepicker').value();
+        var tanggal_lahir = $('#datepicker').val();
+        $scope.data["tanggal_lahir"] = tanggal_lahir;
         $http.post(baseURL.url('admin/angkatan/') + id + '/alumni', $scope.data).success(function(data) {
             if (data.success) {
                 window.location.replace(baseURL.url('admin/angkatan/') + $scope.data['id_angkatan'] + '/alumni');
@@ -95,6 +96,8 @@ angular.module('admin').controller('alumniedit', function($scope, $http, $filter
         $scope.kelas = data;
     });
     $scope.submit = function(id) {
+        var tanggal_lahir = $('#datepicker').val();
+        $scope.data["tanggal_lahir"] = tanggal_lahir;
         $http.put(baseURL.url('admin/alumni/') + id, $scope.data).success(function(data) {
             if (data.success) {
                 $timeout(function() {

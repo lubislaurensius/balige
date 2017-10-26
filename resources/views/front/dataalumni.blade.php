@@ -56,7 +56,7 @@
                         </td>
                         <td><%alumni['pekerjaan']%>
                         </td>
-                        <td><%alumni['jenis_kelamin']%>
+                        <td><%alumni['tempat_lahir']%> / <%alumni['tanggal_lahir']%> 
                         </td>
                         <td><%alumni['status']%>
                         </td>                        

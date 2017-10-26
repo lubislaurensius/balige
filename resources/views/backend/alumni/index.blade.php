@@ -50,7 +50,7 @@
                                 <tr ng-repeat="status in data| filter:paginate">
                                     <td><% status['nama'] %></td>
                                     <td><% status['alamat'] %></td>
-                                    <td><% status['tanggal_lahir'] %></td>
+                                    <td><% status['tempat_lahir'] %> / <% status['tanggal_lahir'] %></td>
                                     <td><% status['agama'] %></td>
                                     <td><% status['status'] %></td>
                                     <td class="center">
@@ -70,7 +70,7 @@
                                                         </a>
                                                     </li>
                                                     <li role="presentation">
-                                                        <a href="#" tabindex="-1" role="menuitem" ng-click="delete(status['id_siswa'])">
+                                                        <a href="#" tabindex="-1" role="menuitem" ng-click="delete(status['id'],status['id_angkatan'])">
                                                             <i class="fa fa-times"></i> Remove 
                                                         </a>
                                                     </li>
