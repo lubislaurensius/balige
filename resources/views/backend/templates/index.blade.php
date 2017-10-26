@@ -66,6 +66,7 @@
         <script src="{{asset('assets/plugins/ckeditor/adapters/jquery.js')}}"></script>
         <script src="{{asset('assets/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
         <script src="{{asset('assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js')}}"></script>
+        <script src="{{asset('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
         <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
         <script>
                     var base_url = "{{url()}}";

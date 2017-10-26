@@ -116,7 +116,7 @@ class AlumniController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function update(AlumniRequest $request, $kelas_id, $id) {
+    public function update(AlumniRequest $request, $id) {
         //
         $input = $request->all();
         $Alumni = Alumni::find($id);
@@ -131,7 +131,7 @@ class AlumniController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function destroy($kelas_id, $id) {
+    public function destroy($id) {
         //
         $Alumni = Alumni::find($id);
         if ($Alumni->delete()) {

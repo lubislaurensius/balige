@@ -20,7 +20,7 @@ class CreateTblAlumniTable extends Migration {
 			$table->string('tempat_lahir')->nullable();
 			$table->date('tanggal_lahir')->nullable();
 			$table->string('agama')->nullable();
-			$table->integer('id_provinsi_tinggal');
+			$table->integer('id_provinsi_tinggal')->nullable();
 			$table->string('alamat')->nullable();
 			$table->string('pekerjaan')->nullable();
 			$table->string('kontak_alumni')->nullable();

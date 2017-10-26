@@ -28,9 +28,9 @@ angular.module('admin').controller('alumni', function($scope, $http, $filter, $t
     })
     $scope.delete = function(id) {
         if (confirm("Anda yakin untuk menghapus data?") === true) {
-            $http.delete(baseURL.url('admin/kelas/') + kelas_id + '/siswa/' + id).success(function(data) {
+            $http.delete(baseURL.url('admin/alumni/') + id ).success(function(data) {
                 if (data.success) {
-                    $http.get(baseURL.url('api/kelas/') + kelas_id + '/siswa').success(function(data) {
+                    $http.get(baseURL.url('admin/angkatan/') + angkatan_id + '/alumni').success(function(data) {
                         $scope.data = data;
                         $scope.alerts.push({type: 'success', msg: 'Data Berhasil Dihapus'});
                         $timeout(function() {
@@ -45,7 +45,6 @@ angular.module('admin').controller('alumni', function($scope, $http, $filter, $t
 angular.module('admin').controller('alumnicreate', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
     $scope.alerts = [];
-    $scope.jenis_kelamin = [{'id': 'L', 'label': 'Laki Laki'}, {'id': 'P', 'label': 'Perempuan'}];
     $scope.agama = [{'id': 'islam', 'label': 'Islam'}, {'id': 'kristen', 'label': 'Kristen'}, {'id': 'hindu', 'label': 'Hindu'}, {'id': 'budha', 'label': 'Budha'}, {'id': 'katolik', 'label': 'Katolik'}];
     $scope.status = [{'id': 'menikah', 'label': 'Menikah'}, {'id': 'lajang', 'label': 'Belum Menikah'}];
     $scope.closeAlert = function(index) {
@@ -78,23 +77,22 @@ angular.module('admin').controller('alumnicreate', function($scope, $http, $filt
 angular.module('admin').controller('alumniedit', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
     $scope.alerts = [];
-    $scope.jk = [{'id': 'L', 'label': 'Laki Laki'}, {'id': 'P', 'label': 'Perempuan'}];
-    $scope.status = [{'id': 'kawin', 'label': 'Menikah'}, {'id': 'belum_kawin', 'label': 'Belum Menikah'}];
+    $scope.agama = [{'id': 'islam', 'label': 'Islam'}, {'id': 'kristen', 'label': 'Kristen'}, {'id': 'hindu', 'label': 'Hindu'}, {'id': 'budha', 'label': 'Budha'}, {'id': 'katolik', 'label': 'Katolik'}];
+    $scope.status = [{'id': 'menikah', 'label': 'Menikah'}, {'id': 'lajang', 'label': 'Belum Menikah'}];
     $scope.closeAlert = function(index) {
         $scope.alerts.splice(index, 1);
     };
-    var kelas_id = $filter('_uriseg')(6);
-    var id = $filter('_uriseg')(8);
-    console.log(status);
+    var id = $filter('_uriseg')(6);
     $http.get(baseURL.url('api/alumni/') + id).success(function(data) {
         $scope.data = data;
     })
+
     $scope.kelas = {};
     $http.get(baseURL.url('api/angkatandropdown')).success(function(data) {
         $scope.kelas = data;
     });
     $scope.submit = function(id) {
-        $http.put(baseURL.url('admin/angkatan/') + angkatan_id + '/alumni/' + id, $scope.data).success(function(data) {
+        $http.put(baseURL.url('admin/alumni/') + id, $scope.data).success(function(data) {
             if (data.success) {
                 $timeout(function() {
                     window.location.replace(baseURL.url('admin/angkatan/') + $scope.data['id_angkatan'] + '/alumni');

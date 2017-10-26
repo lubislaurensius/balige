@@ -27,7 +27,7 @@
                     <div class="tab-content">
                         <div id="panel_tab2_example1" class="tab-pane active">
                                                   <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
-                              <form class="form-horizontal" role="form" name="agendaForm" ng-submit="submit(data.id_siswa)" enctype="multipart/form-data">
+                              <form class="form-horizontal" role="form" name="agendaForm" ng-submit="submit({{$data->id}})"" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Nama Lengkap</label>
                                     <div class="col-sm-9">
@@ -43,7 +43,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Tanggal Lahir</label>
                                     <div class="col-sm-9">
-                                        <input id="id='datepicker' "type='text' class='col-sm-10 form-control' name='tanggal_lahir' ng-model='data.tanggal_lahir'/>
+                                        <input id='datepicker' type='text' class='col-sm-10 form-control' name='tanggal_lahir' ng-model='data.tanggal_lahir'/>
                                     </div>
                                 </div>
                                 <div class="form-group">
