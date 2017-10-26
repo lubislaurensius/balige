@@ -20,10 +20,10 @@
         <div class='row'>
             <div class="form-group">
                 <form class="form-horizontal" role="form" name="agendaForm" ng-submit="submit()" enctype="multipart/form-data">
-                    <label class="col-sm-2 control-label" for="form-field-1"> Tahun </label>
+                    <label class="col-sm-2 control-label" for="form-field-1"> Angkatan </label>
                     <div class="col-sm-5">
                         <select name="id_kelas" class="form-control" ng-model="data.id_kelas">
-                            <option value="">Pilih Tahun</option>
+                            <option value="">Pilih Angkatan</option>
                             <option ng-repeat="unit in kelas" value="<%unit.id%>"><% unit.label %></option>
                         </select>
                     </div>
@@ -40,17 +40,26 @@
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
-                        <th>Tahun</th>
+                        <th>Alamat</th>
+                        <th>Pekerjaan</th>
+                        <th>Tempat/Tanggal lahir</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="kampret in telo">
+                    <tr ng-repeat="alumni in telo">
                         <td><%$index+1%>
                         </td>
-                        <td><%kampret['nis']%>
+                        <td><%alumni['nama']%>
                         </td>
-                        <td><%kampret['nama_siswa']%>
+                        <td><%alumni['alamat']%>
                         </td>
+                        <td><%alumni['pekerjaan']%>
+                        </td>
+                        <td><%alumni['jenis_kelamin']%>
+                        </td>
+                        <td><%alumni['status']%>
+                        </td>                        
                     </tr>
                 </tbody>
             </table>

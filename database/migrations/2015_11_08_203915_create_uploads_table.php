@@ -15,7 +15,8 @@ class CreateUploadsTable extends Migration {
 		Schema::create('uploads', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->timestamps();
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

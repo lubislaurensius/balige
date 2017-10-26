@@ -17,6 +17,8 @@ class CreateTblSoalpollingTable extends Migration {
 			$table->integer('id_soal_poll', true);
 			$table->text('soal_poll', 65535);
 			$table->char('status', 1);
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

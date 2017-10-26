@@ -21,6 +21,8 @@ class CreateTblAbsensiTable extends Migration {
 			$table->integer('tanggal');
 			$table->integer('bulan');
 			$table->integer('tahun');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

@@ -19,11 +19,13 @@ class CreateTblKepegawaianTable extends Migration {
 			$table->string('nama_pegawai', 100);
 			$table->string('kelahiran', 150);
 			$table->string('matpel', 100);
-			$table->string('jk', 1);
+			$table->string('jenis_kelamin', 1);
 			$table->string('status', 50);
 			$table->string('username', 100);
 			$table->string('password', 100);
-			$table->string('remember_token', 100);
+			$table->string('remember_token', 100)->nullable();
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

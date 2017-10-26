@@ -1,15 +1,19 @@
 @extends('backend/templates/index')
+@section('css')
+<link rel="stylesheet" href="{{asset('assets/plugins/bootstrap-datepicker/css/datepicker.css')}}">
+@stop
 @section('js')
-<script src='{{asset('assets/js/controller/admin-siswa.js')}}'></script>
+<script src='{{asset('assets/js/controller/admin-alumni.js')}}'>
+    $('.tanggal_lahir').datepicker()  </script>
 @stop
 @section('content')
-<div class="main-content" ng-controller="siswacreate">
+
+<div class="main-content" ng-controller="alumnicreate">
     <div class="container">
         <!-- start: PAGE HEADER -->
         <div class="row">
             <div class="col-sm-12">
                 <!-- start: PAGE TITLE & BREADCRUMB -->
-{!! Breadcrumbs::render('siswacreate',$id); !!}
                 <div class="page-header">
                     <h1>{{$title}}</h1>
                 </div>
@@ -28,8 +32,9 @@
                     </ul>
                     <div class="tab-content">
                         <div id="panel_tab2_example1" class="tab-pane active">
-                                                   <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
+                            <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
                              <form class="form-horizontal" role="form" name="agendaForm" ng-submit="submit()" enctype="multipart/form-data">
+                                @if(empty($id))
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Tahun Lulus </label>
                                     <div class="col-sm-9">
@@ -39,16 +44,44 @@
                                         </select>
                                     </div>
                                 </div>
+                                @endif
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="form-field-1"> Nomor Induk Siswa </label>
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Nama Lengkap</label>
                                     <div class="col-sm-9">
-                                        <input type='number' class='col-sm-10 form-control' name='nis' ng-model='data.nis'/>
+                                        <input type='text' class='col-sm-10 form-control' name='nama' ng-model='data.nama'/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="form-field-1"> Nama </label>
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Tempat Lahir</label>
                                     <div class="col-sm-9">
-                                        <input type='text' class='col-sm-10 form-control' name='nama_siswa' ng-model='data.nama_siswa'/>
+                                        <input type='text' class='col-sm-10 form-control' name='tempat_lahir' ng-model='data.tempat_lahir'/>
+                                    </div>
+                                </div>                                
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Tanggal Lahir</label>
+                                    <div class="col-sm-9">
+                                        <input id="id='datepicker' "type='text' class='col-sm-10 form-control' name='tanggal_lahir' ng-model='data.tanggal_lahir'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Agama </label>
+                                    <div class="col-sm-9">
+                                        <select name="data.id" class="form-control" ng-model="data.agama" required>
+                                            <option value="">Pilih Agama</option>
+                                            <option ng-repeat="unit in agama" value="<% unit.id %>"><% unit.label %></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Alamat </label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='alamat' ng-model='data.alamat'/>
+                                    </div>
+                                </div>                                
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Pekerjaan </label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='pekerjaan' ng-model='data.pekerjaan'/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -61,13 +94,18 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Nomor Kontak </label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='kontak_alumni' ng-model='data.kontak_alumni'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"></label>
                                     <div class="col-sm-9">
                                         
                                         <button class="btn btn-success" type="submit">
                                             Save
                                         </button>
-                                        <a href='{{route('admin.kelas.{id}.siswa.index',$id)}}' class="btn btn-blue">Back</a>
                                     </div>
                                 </div>
                             </form>

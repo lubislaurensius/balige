@@ -20,6 +20,8 @@ class CreateTblPesanTable extends Migration {
 			$table->text('pesan', 65535);
 			$table->char('status', 1)->default('N');
 			$table->dateTime('tgl_posting');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

@@ -52,8 +52,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::resource('berita', 'Admin\BeritaController');
     Route::resource('pengumuman', 'Admin\PengumumanController');
     Route::resource('agenda', 'Admin\AgendaController');
-    Route::resource('kelas', 'Admin\KelasController');
-    Route::resource('kelas/{id}/siswa', 'Admin\SiswaController');
+    Route::resource('angkatan', 'Admin\AngkatanController');
+    Route::resource('alumni', 'Admin\AlumniController');    
+    Route::get('angkatan/{id}/alumni', 'Admin\AlumniController@listAlumniByAngkatan');
+    Route::post('angkatan/{id}/alumni', 'Admin\AlumniController@storeAlumniByAngkatan');
+    Route::get('angkatan/{id}/alumni/create', 'Admin\AlumniController@createAlumniByAngkatan');
     Route::resource('pegawai', 'Admin\PegawaiController');
     Route::resource('polling', 'Admin\PollingController');
     Route::resource('polling/{id}/jawaban', 'Admin\JawabanController');
@@ -93,12 +96,12 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('agenda', 'Admin\AgendaController@apiAgenda');
     Route::get('agenda/{id}', 'Admin\AgendaController@show');
 
-    Route::get('kelas', 'Admin\KelasController@apiKelas');
-    Route::get('kelas/{id}', 'Admin\KelasController@show');
+    Route::get('angkatan', 'Admin\AngkatanController@apiAngkatan');
+    Route::get('angkatan/{id}', 'Admin\AngkatanController@show');
 
-    Route::get('kelas/{id}/siswa', 'Admin\SiswaController@apiSiswa');
-    Route::get('siswa/{id}', 'Admin\SiswaController@show');
-    Route::get('kelasdropdown', 'Admin\KelasController@apiCreateKelas');
+    Route::get('angkatan/{id}/alumni', 'Admin\AlumniController@apiAlumni');
+    Route::get('alumni/{id}', 'Admin\AlumniController@show');
+    Route::get('angkatandropdown', 'Admin\AngkatanController@apiCreateAngkatan');
 
     Route::get('pegawai', 'Admin\PegawaiController@apiPegawai');
     Route::get('pegawai/{id}', 'Admin\PegawaiController@show');
@@ -123,6 +126,6 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('upload', 'Admin\UploadController@apiUpload');
     Route::get('upload/{id}', 'Admin\UploadController@apiUpload');
 
-    Route::get('ambilsiswa/{id}', 'FrontController@ambilsiswa');
+    Route::get('ambilalumni/{id}', 'FrontController@ambilsiswa');
     Route::post('showabsensi', 'FrontController@showabsensi');
 });

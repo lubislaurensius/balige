@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateTblDownloadTable extends Migration {
+class CreateTblAngkatanTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,10 @@ class CreateTblDownloadTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('tbl_download', function(Blueprint $table)
+		Schema::create('tbl_angkatan', function(Blueprint $table)
 		{
-			$table->integer('id_download', true);
-			$table->string('judul_file', 200);
-			$table->string('nama_file', 200);
-			$table->date('tgl_posting');
-			$table->string('author', 20);
+			$table->increments('id');
+			$table->string('tahun_lulus', 15);
 			$table->timestamp('created_at')->nullable();
 			$table->timestamp('updated_at')->nullable();
 		});
@@ -32,7 +29,7 @@ class CreateTblDownloadTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('tbl_download');
+		Schema::drop('tbl_angkatan');
 	}
 
 }

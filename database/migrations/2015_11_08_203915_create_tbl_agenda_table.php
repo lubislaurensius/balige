@@ -23,6 +23,8 @@ class CreateTblAgendaTable extends Migration {
 			$table->string('tempat', 150);
 			$table->string('jam', 50);
 			$table->text('keterangan');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

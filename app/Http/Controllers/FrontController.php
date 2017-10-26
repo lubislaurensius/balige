@@ -47,7 +47,7 @@ class FrontController extends Controller {
         switch ($id) {
             case 3.4: return $this->dataguru();
             case 3.5: return $this->datapegawai();
-            case 4.1: return $this->datasiswa();
+            case 4.1: return $this->dataalumni();
             case 5.1: return $this->absensi();
         }
         $this->data['page'] = Models\Data::with('menu')->where('data_id', $id)->first();
@@ -66,13 +66,13 @@ class FrontController extends Controller {
         return response()->json($siswa);
     }
 
-    public function datasiswa() {
-        $this->data['title'] = 'Data Siswa';
-        return view('front.datasiswa', $this->data);
+    public function dataalumni() {
+        $this->data['title'] = 'Data Alumni';
+        return view('front.dataalumni', $this->data);
     }
 
     public function ambilsiswa($id) {
-        $siswa = Models\Siswa::where('id_kelas', $id)->get();
+        $siswa = Models\Alumni::where('id_angkatan', $id)->get();
         return response()->json($siswa);
     }
 

@@ -21,6 +21,8 @@ class CreateTblGambarTable extends Migration {
 			$table->string('file_type', 10);
 			$table->string('image_size', 20);
 			$table->date('uploaded_date');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

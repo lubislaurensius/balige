@@ -39,12 +39,12 @@ angular.module('siswa').controller('kelas', function($scope, $http, $filter, $ti
     $scope.kelas = {};
     $scope.data = {};
     $scope.show = false;
-    $http.get(baseURL.url('api/kelasdropdown')).success(function(data) {
+    $http.get(baseURL.url('api/angkatandropdown')).success(function(data) {
         $scope.kelas = data;
     });
     $scope.submit = function() {
         $scope.show = true;
-        $http.get(baseURL.url('api/ambilsiswa/' + $scope.data['id_kelas'])).success(function(e) {
+        $http.get(baseURL.url('api/ambilalumni/' + $scope.data['id_kelas'])).success(function(e) {
 
             $scope.telo = e;
         })

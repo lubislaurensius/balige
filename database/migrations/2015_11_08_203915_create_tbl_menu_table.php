@@ -18,6 +18,8 @@ class CreateTblMenuTable extends Migration {
 			$table->string('title', 50);
 			$table->char('id_parent', 10);
 			$table->integer('level');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

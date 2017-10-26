@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\KelasRequest;
+use App\Http\Requests\AngkatanRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Kelas;
+use App\Models\Angkatan;
 use Illuminate\Contracts\Auth\Guard;
 
-class KelasController extends Controller {
+class AngkatanController extends Controller {
 
     public function __construct(Guard $auth) {
         $this->auth = $auth;
@@ -20,17 +20,17 @@ class KelasController extends Controller {
      */
     public function index() {
         //
-        $data['title'] = 'Menu Kelas';
-        return view('backend.kelas.index', $data);
+        $data['title'] = 'Menu Angkatan';
+        return view('backend.angkatan.index', $data);
     }
 
-    public function apiKelas() {
-        $data = Kelas::all();
+    public function apiAngkatan() {
+        $data = Angkatan::all();
         return response()->json($data);
     }
 
-    public function apiCreateKelas() {
-        $data = Kelas::DropdownKelas();
+    public function apiCreateAngkatan() {
+        $data = Angkatan::DropdownAngkatan();
         return response()->json($data);
     }
 
@@ -41,8 +41,8 @@ class KelasController extends Controller {
      */
     public function create() {
         //
-        $data['title'] = 'Tambah Kelas';
-        return View('backend.kelas.create', $data);
+        $data['title'] = 'Tambah Angkatan';
+        return View('backend.angkatan.create', $data);
     }
 
     /**
@@ -50,11 +50,11 @@ class KelasController extends Controller {
      *
      * @return Response
      */
-    public function store(KelasRequest $request) {
+    public function store(AngkatanRequest $request) {
         //
         $input = $request->all();
-        $kelas = new Kelas($input);
-        if ($kelas->save()) {
+        $angkatan = new Angkatan($input);
+        if ($angkatan->save()) {
             return response()->json(array('success' => TRUE));
         }
     }
@@ -67,7 +67,7 @@ class KelasController extends Controller {
      */
     public function show($id) {
         //
-        $data = Kelas::find($id);
+        $data = Angkatan::find($id);
         return response()->json($data);
     }
 
@@ -79,9 +79,9 @@ class KelasController extends Controller {
      */
     public function edit($id) {
         //
-        $data['title'] = 'Edit Kelas';
-        $data['data'] = Kelas::find($id);
-        return view('backend.kelas.edit', $data);
+        $data['title'] = 'Edit Angkatan';
+        $data['data'] = Angkatan::find($id);
+        return view('backend.angkatan.edit', $data);
     }
 
     /**
@@ -90,11 +90,11 @@ class KelasController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function update(KelasRequest $request, $id) {
+    public function update(AngkatanRequest $request, $id) {
         //
         $input = $request->all();
-        $kelas = Kelas::find($id);
-        if ($kelas->update($input)) {
+        $angkatan = Angkatan::find($id);
+        if ($angkatan->update($input)) {
             return response()->json(array('success' => TRUE));
         }
     }
@@ -107,8 +107,8 @@ class KelasController extends Controller {
      */
     public function destroy($id) {
         //
-        $kelas = Kelas::find($id);
-        if ($kelas->delete()) {
+        $angkatan = Angkatan::find($id);
+        if ($angkatan->delete()) {
             return response()->json(array('success' => TRUE));
         }
     }

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\SiswaRequest;
+use App\Http\Requests\AlumniRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Siswa;
+use App\Models\Alumni;
 use Illuminate\Contracts\Auth\Guard;
 
-class SiswaController extends Controller {
+class AlumniController extends Controller {
 
     public function __construct(Guard $auth) {
         $this->auth = $auth;
@@ -22,18 +22,24 @@ class SiswaController extends Controller {
     public function index($kelas_id, $id = null) {
         //
         $data['kelas_id'] = $kelas_id;
-        $data['title'] = 'Menu Siswa';
-        return view('backend.siswa.index', $data);
-    }
+        $data['title'] = 'Menu Alumni';
+        return view('backend.alumni.index', $data);
+    }   
 
+    public function listAlumniByAngkatan($angkatan_id) {
+        //
+        $data['angkatan_id'] = $angkatan_id;
+        $data['title'] = 'Menu Alumni';
+        return view('backend.alumni.index', $data);
+    }
     /**
      * Show the form for creating a new resource.
      *
      * @return Response
      */
-    public function apiSiswa($id = NULL) {
+    public function apiAlumni($id = NULL) {
         //
-        $data = Siswa::with('kelas')->where('id_kelas', '=', $id)->orderBy('nis')->get();
+        $data = Alumni::with('angkatan')->where('id_angkatan', '=', $id)->orderBy('nama')->get();
         return response()->json($data);
     }
 
@@ -45,8 +51,15 @@ class SiswaController extends Controller {
     public function create($id = null) {
         //
         $data['id'] = $id;
-        $data['title'] = 'Tambah Siswa';
-        return View('backend.siswa.create', $data);
+        $data['title'] = 'Tambah Alumni';
+        return View('backend.alumni.create', $data);
+    }
+
+    public function createAlumniByAngkatan($id = null) {
+        //
+        $data['id'] = $id;
+        $data['title'] = 'Tambah Alumni';
+        return View('backend.alumni.create', $data);
     }
 
     /**
@@ -54,11 +67,20 @@ class SiswaController extends Controller {
      *
      * @return Response
      */
-    public function store(SiswaRequest $request, $id = null) {
+    public function store(AlumniRequest $request, $id = null) {
         //
         $input = $request->all();
-        $siswa = new Siswa($input);
-        if ($siswa->save()) {
+        $Alumni = new Alumni($input);
+        if ($Alumni->save()) {
+            return response()->json(array('success' => TRUE));
+        }
+    }
+
+    public function storeAlumniByAngkatan(AlumniRequest $request, $id = null) {
+        //
+        $input = $request->all();
+        $Alumni = new Alumni($input);
+        if ($Alumni->save()) {
             return response()->json(array('success' => TRUE));
         }
     }
@@ -71,7 +93,7 @@ class SiswaController extends Controller {
      */
     public function show($id) {
         //
-        $data = Siswa::find($id);
+        $data = Alumni::find($id);
         return response()->json($data);
     }
 
@@ -81,12 +103,11 @@ class SiswaController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function edit($kelas_id, $id) {
+    public function edit($id) {
         //
-        $data['kelas_id'] = $kelas_id;
-        $data['title'] = 'Edit Siswa';
-        $data['data'] = Siswa::find($id);
-        return view('backend.siswa.edit', $data);
+        $data['title'] = 'Edit Alumni';
+        $data['data'] = Alumni::find($id);
+        return view('backend.alumni.edit', $data);
     }
 
     /**
@@ -95,11 +116,11 @@ class SiswaController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function update(SiswaRequest $request, $kelas_id, $id) {
+    public function update(AlumniRequest $request, $kelas_id, $id) {
         //
         $input = $request->all();
-        $siswa = Siswa::find($id);
-        if ($siswa->update($input)) {
+        $Alumni = Alumni::find($id);
+        if ($Alumni->update($input)) {
             return response()->json(array('success' => TRUE));
         }
     }
@@ -112,8 +133,8 @@ class SiswaController extends Controller {
      */
     public function destroy($kelas_id, $id) {
         //
-        $siswa = Siswa::find($id);
-        if ($siswa->delete()) {
+        $Alumni = Alumni::find($id);
+        if ($Alumni->delete()) {
             return response()->json(array('success' => TRUE));
         }
     }

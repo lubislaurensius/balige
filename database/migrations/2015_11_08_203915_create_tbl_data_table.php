@@ -17,6 +17,8 @@ class CreateTblDataTable extends Migration {
 			$table->integer('id_data', true);
 			$table->text('content', 65535);
 			$table->string('data_id', 10);
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

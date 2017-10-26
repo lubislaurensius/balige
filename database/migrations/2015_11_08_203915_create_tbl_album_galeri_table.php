@@ -16,6 +16,8 @@ class CreateTblAlbumGaleriTable extends Migration {
 		{
 			$table->integer('id_album', true);
 			$table->string('nama_album', 100);
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

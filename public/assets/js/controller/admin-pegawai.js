@@ -26,6 +26,8 @@ angular.module('admin').controller('pegawai', function($scope, $http, $filter, $
         }, true);
     })
     $scope.delete = function(id) {
+                console.log(id);
+
         if (confirm("Anda yakin untuk menghapus data?") === true) {
             $http.delete(baseURL.url('admin/pegawai/') + id).success(function(data) {
                 if (data.success) {

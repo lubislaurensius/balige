@@ -22,6 +22,8 @@ class CreateTblBeritaTable extends Migration {
 			$table->time('waktu');
 			$table->string('author', 20);
 			$table->integer('counter');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();		
 		});
 	}
 

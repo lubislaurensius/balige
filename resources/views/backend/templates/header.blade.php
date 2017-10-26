@@ -79,14 +79,14 @@
                         </li>
                     </ul>
                 </li>
-                <li class="{{setActive('admin.kelas')}} {{setActive('admin.siswa')}} {{setActive('admin.pegawai')}}">
+                <li class="{{setActive('admin.angkatan')}} {{setActive('admin.alumni')}} {{setActive('admin.pegawai')}}">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown">
                         <span class="selected"></span>
                         Alumni <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="{{setActive('admin.kelas')}}{{setActive('admin.siswa')}}">
-                            <a href="{{route('admin.kelas.index')}}">
+                        <li class="{{setActive('admin.angkatan')}}{{setActive('admin.alumni')}}">
+                            <a href="{{route('admin.angkatan.index')}}">
                               Data Alumni
                             </a>
                         </li>

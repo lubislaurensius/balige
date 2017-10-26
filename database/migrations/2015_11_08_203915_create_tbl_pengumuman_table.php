@@ -19,6 +19,8 @@ class CreateTblPengumumanTable extends Migration {
 			$table->text('isi', 65535);
 			$table->date('tanggal');
 			$table->string('penulis', 100);
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 

@@ -18,6 +18,8 @@ class CreateTblJawabanpollTable extends Migration {
 			$table->integer('id_soal_poll');
 			$table->string('jawaban', 100);
 			$table->integer('counter');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
 		});
 	}
 
