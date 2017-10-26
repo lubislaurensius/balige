@@ -34,15 +34,6 @@
                             <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
                             <form class="form-horizontal" role="form" name="agendaForm" ng-submit="submit()" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="form-field-1"> Pertanyaan </label>
-                                    <div class="col-sm-9">
-                                        <select name="id_soal_poll" class="form-control" ng-model="data.id_album">
-                                            <option value="">Pilih Polling</option>
-                                            <option ng-repeat="unit in galeri" ng-selected="unit.id == data.id_album" value="<%unit.id%>"><% unit.label %></option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
                                     <label class="col-sm-2 control-label">
                                         Image Upload
                                     </label>

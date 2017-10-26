@@ -14,7 +14,7 @@
             <!-- GRID -->
             <ul id="Grid" class="list-unstyled">
                 @foreach($foto as $galeri)
-                <li class="col-md-3 col-xs-9 mix category_1" data-cat="1">
+                <li class="col-md-4 col-xs-9 mix category_1" data-cat="1">
                     <div class="portfolio-item img-thumbnail">
                         <a class="thumb-info group1" href="{{url('upload/besar/'.$galeri->foto_besar)}}">
                             <img src="{{url('upload/kecil/'.$galeri->foto_kecil)}}" class="img-responsive" alt="">

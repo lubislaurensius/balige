@@ -14,10 +14,10 @@
             <!-- GRID -->
             <ul id="Grid" class="list-unstyled">
                 @foreach($album as $galeri)
-                <li class="col-md-3 col-xs-9 mix category_1" data-cat="1">
+                <li class="col-md-4 col-xs-9 mix category_1" data-cat="1">
                     <div class="portfolio-item img-thumbnail">
                         <a class="thumb-info" href="{{url('galeri',$galeri->id_album)}}">
-                            <img src="{{asset('front/images/image01.jpg')}}" class="img-responsive" alt="">
+                            <img src="{{asset('front/images/default_album.jpg')}}" class="img-responsive" alt="">
                             <span class="thumb-info-title"> <span class="thumb-info-type">{{$galeri->nama_album}}</span> </span>
                             <span class="image-overlay"> <i class="fa fa-mail-forward circle-icon circle-main-color"></i> </span>
                         </a>

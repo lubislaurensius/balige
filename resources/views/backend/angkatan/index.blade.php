@@ -58,12 +58,12 @@
                                                 </a>
                                                 <ul class="dropdown-menu pull-right" role="menu">
                                                     <li role="presentation">
-                                                        <a href="{{url('admin/siswa')}}/<% status['id_data']%>/edit" tabindex="-1" role="menuitem">
+                                                        <a href="{{url('admin/angkatan')}}/<% status['id']%>/alumni" tabindex="-1" role="menuitem">
                                                             <i class="fa fa-user"></i> List Alumni
                                                         </a>
                                                     </li>
                                                     <li role="presentation">
-                                                        <a href="{{url('admin/angkatan')}}/<% status['id_data']%>edit" tabindex="-1" role="menuitem">
+                                                        <a href="{{url('admin/angkatan')}}/<% status['id']%>/alumni" tabindex="-1" role="menuitem">
                                                             <i class="fa fa-edit"></i> Edit
                                                         </a>
                                                     </li>
