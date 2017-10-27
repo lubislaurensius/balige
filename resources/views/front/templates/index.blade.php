@@ -82,6 +82,11 @@
         <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
         <script src="{{asset('front/plugins/flex-slider/jquery.flexslider.js')}}"></script>
         <script src="{{asset('front/plugins/mixitup/src/jquery.mixitup.js')}}"></script>
+
+        <script src="{{asset('front/plugins/highmaps/highmaps.js')}}"></script>
+        <script src="{{asset('front/plugins/highmaps/id-all.js')}}"></script>
+        <script src="{{asset('front/plugins/highmaps/exporting.js')}}"></script>
+
         <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
         <script>
 var base_url = "{{url()}}";

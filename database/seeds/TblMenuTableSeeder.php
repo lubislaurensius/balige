@@ -85,7 +85,13 @@ class TblMenuTableSeeder extends Seeder {
 			'title'=>'Data Prestasi ',
 			'id_parent'=>'4',
 			'level'=>1
-		] );						
+		] );
+		Menu::create( [
+			'id'=>'4.3',
+			'title'=>'Data Persebaran Alumni ',
+			'id_parent'=>'4',
+			'level'=>1
+		] );									
 		Menu::create( [
 			'id'=>'6',
 			'title'=>'Event',

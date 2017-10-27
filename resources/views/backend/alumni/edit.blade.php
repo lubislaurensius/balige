@@ -54,7 +54,7 @@
                                             <option ng-repeat="unit in agama" value="<% unit.id %>"><% unit.label %></option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>                      
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Alamat </label>
                                     <div class="col-sm-9">

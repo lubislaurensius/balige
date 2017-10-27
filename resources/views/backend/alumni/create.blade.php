@@ -70,6 +70,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Provinsi Tempat Tinggal </label>
+                                    <div class="col-sm-9">
+                                        <select name="id_provinsi_tinggal" class="form-control" ng-model="data.id_provinsi_tinggal">
+                                            <option value="">Pilih Provinsi</option>
+                                            <option ng-repeat="unit in id_provinsi_tinggal" ng-selected="unit.id == {{$id}}" value="<%unit.id%>"><% unit.label %></option>
+                                        </select>
+                                    </div>
+                                </div>                                
+                                <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Alamat </label>
                                     <div class="col-sm-9">
                                         <input type='text' class='col-sm-10 form-control' name='alamat' ng-model='data.alamat'/>

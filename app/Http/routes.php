@@ -96,6 +96,8 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('agenda', 'Admin\AgendaController@apiAgenda');
     Route::get('agenda/{id}', 'Admin\AgendaController@show');
 
+    Route::get('provinsi-list-dropdown', 'Admin\AlumniController@apiProvinsiList');
+
     Route::get('angkatan', 'Admin\AngkatanController@apiAngkatan');
     Route::get('angkatan/{id}', 'Admin\AngkatanController@show');
 

@@ -146,9 +146,9 @@ class FrontController extends Controller {
         return view('front.download', $this->data);
     }
     public function persebaranalumni() {
-        $persebaran_alumni = DB::table('tbl_persebaran_alumni')->pluck('jumlah');
-        dd($persebaran_alumni);
-        return view('front.download', $this->data);
+        $this->data['persebaran_alumni'] = collect(DB::table('tbl_persebaran_alumni')->lists('jumlah'));
+        $this->data['title'] = 'Persebaran Alumni';
+        return view('front.persebaran_alumni', $this->data);
     }
 
 }
