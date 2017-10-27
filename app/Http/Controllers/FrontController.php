@@ -6,7 +6,8 @@ use Illuminate\Cookie\CookieJar;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models;
-use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\DB;
+use DB;
 
 class FrontController extends Controller {
 
@@ -50,6 +51,7 @@ class FrontController extends Controller {
             case 4.1: return $this->dataalumni();
             case 5.1: return $this->absensi();
             case 8: return $this->album();
+            case 4.3: return $this->persebaranalumni();
         }
         $this->data['page'] = Models\Data::with('menu')->where('data_id', $id)->first();
         $this->data['title'] = $this->data['page'] ? $this->data['page']->menu->title : 'Page Tidak Ditekemukan';
@@ -141,6 +143,11 @@ class FrontController extends Controller {
     public function download() {
         $this->data['title'] = 'Download File';
         $this->data['download'] = Models\Upload::orderBy('tgl_posting')->paginate(10);
+        return view('front.download', $this->data);
+    }
+    public function persebaranalumni() {
+        $persebaran_alumni = DB::table('tbl_persebaran_alumni')->pluck('jumlah');
+        dd($persebaran_alumni);
         return view('front.download', $this->data);
     }
 
