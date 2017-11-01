@@ -18,9 +18,9 @@ class FrontController extends Controller {
      */
     public function __construct() {
         $this->data['menu'] = Models\Menu::with('child')->where('level', 0)->get();
-        $this->data['berita'] = Models\Berita::orderBy('tanggal', 'desc')->limit(4)->get();
+        $this->data['berita'] = Models\Berita::orderBy('created_at', 'desc')->limit(4)->get();
         $this->data['pengumuman'] = Models\Pengumuman::orderBy('tanggal', 'desc')->limit(5)->get();
-        $this->data['agenda'] = Models\Agenda::orderBy('tgl_posting', 'desc')->limit(5)->get();
+        $this->data['agenda'] = Models\Agenda::orderBy('created_at', 'desc')->limit(5)->get();
         $this->data['polling'] = Models\Polling::with('jawaban')->where('status', 'Y')->limit(1)->first();
     }
 

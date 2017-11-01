@@ -20,7 +20,7 @@ class Menu extends Model {
 
     public function scopeDropdownMenu($query) {
         $data = array();
-        $eselon = $query->select(array('id', 'title'))->has('datas')->get();
+        $eselon = $query->select(array('id', 'title'))->get();
         if (count($eselon) > 0) {
             foreach ($eselon as $ese) {
                 $data[] = array('id' => $ese->id, 'label' => $ese->id.' - '.$ese->title);

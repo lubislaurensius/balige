@@ -11,7 +11,7 @@ body {
 	color: #888888;
 	direction: ltr;
 	font-family: 'Open+Sans', sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 }
 a, a:focus, a:hover, a:active {
 	outline: 0 !important;
@@ -2219,13 +2219,13 @@ div.testimonial-author p {
 footer {
 	background: #363839;
 	border-top: 4px solid #1F1F1F;
-	font-size: 0.9em;
-	padding: 40px 0 0;
+	font-size: 1em;
+	padding: 10px 0 0;
 	position: relative;
 }
 footer h4 {
-	font-size: 1.8em;
-	font-weight: 200;
+	font-size: 2em;
+	font-weight: 500;
 	text-shadow: 1px 1px 1px #000000;
 }
 footer h1, footer h2, footer h3, footer h4, footer a {
@@ -2248,10 +2248,10 @@ footer ul.contact p {
 }
 footer ul.contact i {
 	float: left;
-	margin: 7px 8px 10px 0;
+	margin: 3px 4px 6px 0;
 }
 footer div.newsletter form {
-	max-width: 262px;
+	max-width: 26px;
 	width: 100%;
 }
 footer div.twitter .fa {

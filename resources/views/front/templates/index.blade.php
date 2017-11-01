@@ -72,7 +72,6 @@
         <script src="{{asset('front/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('front/plugins/jquery.transit/jquery.transit.js')}}"></script>
         <script src="{{asset('front/plugins/hover-dropdown/twitter-bootstrap-hover-dropdown.min.js')}}"></script>
-        <script src="{{asset('front/plugins/bootstrap-datepicker/JS/.bootstrap-datepicker.js')}}"></script>
         <script src="{{asset('front/plugins/jquery.appear/jquery.appear.js')}}"></script>
         <script src="{{asset('front/plugins/blockUI/jquery.blockUI.js')}}"></script>
         <script src="{{asset('front/plugins/jquery-cookie/jquery.cookie.js')}}"></script>
