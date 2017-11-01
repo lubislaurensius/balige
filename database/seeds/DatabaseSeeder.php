@@ -17,12 +17,12 @@ class DatabaseSeeder extends Seeder {
 		// $this->call('UserTableSeeder');
 		// 
 		$this->call('UserTableSeeder');
-/*		$this->call('TblAgendaTableSeeder');
+		$this->call('TblAgendaTableSeeder');
 		$this->call('TblBeritaTableSeeder');
 		$this->call('TblMenuTableSeeder');
 		$this->call('TblPengumumanTableSeeder');
 		$this->call('TblPersebaranAlumniTableSeeder');
-		$this->call('TblProvinsiTableSeeder');*/
+		$this->call('TblProvinsiTableSeeder');
 	}
 
 }
