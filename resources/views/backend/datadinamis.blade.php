@@ -10,7 +10,7 @@
                 <div class="page-header">
                     <h1>
                         Home<br />
-                        <small>Halaman Administrator SMA N 1</small>
+                        <small>Halaman Administrator SMA N 2</small>
                     </h1>
                 </div>
                 <!-- end: PAGE TITLE & BREADCRUMB -->
