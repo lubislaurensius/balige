@@ -36,10 +36,12 @@
                         @foreach($agenda as $ag)
                         <li>
                             <div class="post-info">
-                                <a href="#">
+                                <a href="{{url('agenda',$ag->id_agenda)}}">
                                     {{$ag->tema_agenda}}
                                 </a>
                                 <div class="post-meta">
+                                    {{$ag->isi}}
+                                    <BR>
                                     {{date('d F Y',strtotime($ag->tgl_posting))}};
                                 </div>
                             </div>

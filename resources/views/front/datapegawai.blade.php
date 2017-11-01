@@ -13,9 +13,9 @@
     <section class="wrapper">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="center">Data Pegawai SMAN 1</h1>
+                <h1 class="center">Data Pengurus Alumni</h1>
                 <p class="center">
-                    <img src="{{asset('upload/dewan-tu.jpg')}}" />
+                    <img src="{{asset('upload/pengurus.jpg')}}" />
                 </p>
                 <hr>
             </div>
