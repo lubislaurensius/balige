@@ -1,33 +1,9 @@
 <footer id="footer">
     <div class="container">
         <div class="row">
-            {{-- <div class="col-md-3"> --}}
-                {{-- <div class="newsletter">
-                    <h4>Newsletter</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-                    </p>
-                    <form method="POST" action="#" id="newsletterForm">
-                        <div class="input-group">
-                            <input type="text" id="email" name="email" placeholder="Email Address" class="form-control">
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn btn-default">
-                                    Go!
-                                </button> </span>
-                        </div>
-                    </form>
-                </div>
-            </div> --}}
-         {{--    <div class="col-md-3">
-                <h4>Latest Tweet</h4>
-                <div class="twitter" id="tweet">
-                    <i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-                    <a href="#" class="time">
-                        12 Dec
-                    </a>
-                </div>
-            </div> --}}
-            <div class="col-md-4">
+            <div class="col-md-1">
+            </div>
+             <div class="col-md-4">
                 <div class="contact-details">
                     <h4>Contact Us</h4>
                     <ul class="contact">
@@ -52,8 +28,10 @@
                     </ul>
                 </div>
             </div>
+            <div class="col-md-4">
+            </div>
             <div class="col-md-2">
-                <h4>Follow Us</h4>
+                <h4>&nbsp&nbspFollow Us</h4>
                 <div class="social-icons">
                     <ul>
                         <li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
@@ -79,7 +57,7 @@
     <div class="footer-copyright">
         <div class="container">
             <div class="row">
-                <div class="col-md-1">
+                <div class="col-md-5">
                     <a class="logo" href="{{url()}}">
                         Alumni SMAN 2 Balige
                     </a>
@@ -89,43 +67,6 @@
                         &copy; Copyright 2017. All Rights Reserved.
                     </p>
                 </div>
-                {{-- <div class="col-md-4"> --}}
-                    {{-- <nav id="sub-menu"> --}}
-                     {{--    <ul>
-                            <li>
-                                <a href="{{url('berita')}}">
-                                    Berita
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{url('galeri')}}">
-                                    Galeri
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{url('agenda')}}">
-                                    Agenda
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{url('download')}}">
-                                    Download
-                                </a>
-                            </li> --}}
-                       {{--      <li>
-                                @if(!Auth::check())
-                                <a href="{{url('login')}}">
-                                    Login
-                                </a>
-                                @else
-                                <a href="{{url('logout')}}">
-                                    Logout
-                                </a>
-                                @endif
-                            </li> --}}
-                        {{-- </ul> --}}
-                    {{-- </nav> --}}
-                {{-- </div> --}}
             </div>
         </div>
     </div>

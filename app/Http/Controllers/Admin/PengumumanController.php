@@ -62,7 +62,7 @@ class PengumumanController extends Controller {
         $input = $request->all();
         $pengumuman = new Pengumuman($input);
         $pengumuman->tanggal = date('Y-m-d');
-        $pengumuman->penulis = $this->auth->user()->nama_pegawai;
+        $pengumuman->penulis = $this->auth->user()->username;
         if ($pengumuman->save()) {
             return response()->json(array('success' => TRUE));
         };
@@ -105,7 +105,7 @@ class PengumumanController extends Controller {
     public function update(PengumumanRequest $request, $id) {
         //
         $input = $request->all();
-        $input['penulis'] = $this->auth->user()->nama_pegawai;
+        $input['penulis'] = $this->auth->user()->username;
         $pengumuman = Pengumuman::find($id);
         if ($pengumuman->update($input)) {
             return response()->json(array('success' => TRUE));

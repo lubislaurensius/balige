@@ -27,7 +27,7 @@ class AgendaRequest extends Request {
             'tgl_mulai' => 'required|date',
             'tgl_selesai' => 'required|date',
             'tempat' => 'required',
-            'waktu' => 'required',
+            'jam' => 'required',
             'keterangan' => 'required'
         ];
     }
@@ -41,7 +41,7 @@ class AgendaRequest extends Request {
             'tgl_selesai.required' => 'Tanggal Selesai Diperlukan',
             'tgl_selesai.date' => 'Tanggal Selesai Format Tanggal tidak benar',
             'tempat.required' => 'Tempat Diperlukan!',
-            'waktu.required' => 'Waktu Diperlukan!',
+            'jam.required' => 'Waktu Diperlukan!',
             'keterangan.required' => 'Keterangan Diperlukan'
         ];
     }

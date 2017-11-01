@@ -73,7 +73,8 @@ class BeritaController extends Controller {
         }
         $berita->judul_berita = $data->judul_berita;
         $berita->isi = $data->isi;
-        $berita->author = $this->auth->user()->nama_pegawai;
+        $berita->author = $this->auth->user()->username;
+        $berita->counter = 0;
         if ($berita->save()) {
             return response()->json(array('success' => TRUE));
         };
