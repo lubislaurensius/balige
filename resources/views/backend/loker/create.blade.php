@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <!-- start: PAGE TITLE & BREADCRUMB -->
-                {!! Breadcrumbs::render('indexberitacreate'); !!}
+                {!! Breadcrumbs::render('indexlokercreate'); !!}
                 <div class="page-header">
                     <h1>{{$title}}</h1>
                 </div>
@@ -32,11 +32,11 @@
                     <div class="tab-content">
                         <div id="panel_tab2_example1" class="tab-pane active">
                             <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><% alert.msg %></alert>
-                            <form class="form-horizontal" role="form" name="beritaForm" ng-submit="submit()" enctype="multipart/form-data">
+                            <form class="form-horizontal" role="form" name="lokerForm" ng-submit="submit()" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Judul Lowongan </label>
                                     <div class="col-sm-9">
-                                        <input type='text' class='col-sm-10 form-control' name='judul_berita' ng-model='data.judul_berita' required/>
+                                        <input type='text' class='col-sm-10 form-control' name='judul_loker' ng-model='data.judul_loker' required/>
                                     </div>
                                 </div>
                                 <div class="form-group">
