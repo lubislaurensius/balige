@@ -52,6 +52,7 @@ class FrontController extends Controller {
             case 5.1: return $this->absensi();
             case 8: return $this->album();
             case 4.3: return $this->persebaranalumni();
+            case 6.1: return $this->lokerlist();
         }
         $this->data['page'] = Models\Data::with('menu')->where('data_id', $id)->first();
         $this->data['title'] = $this->data['page'] ? $this->data['page']->menu->title : 'Page Tidak Ditekemukan';
