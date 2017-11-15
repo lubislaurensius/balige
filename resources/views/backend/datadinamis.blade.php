@@ -49,12 +49,27 @@
                 <div class="core-box">
                     <div class="heading">
                         <i class="clip-database circle-icon circle-bricky"></i>
-                        <h2>Manajemen Agenda Sekolah</h2>
+                        <h2>Manajemen Agenda</h2>
                     </div>
                     <div class="content">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                     </div>
                     <a class="view-more" href="{{route('admin.agenda.index')}}">
+                        View More <i class="clip-arrow-right-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="core-box">
+                    <div class="heading">
+                        <i class="clip-database circle-icon circle-bricky"></i>
+                        <h2>Manajemen Lowongan Kerja</h2>
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                    <a class="view-more" href="{{route('admin.loker.index')}}">
                         View More <i class="clip-arrow-right-2"></i>
                     </a>
                 </div>

@@ -127,6 +127,17 @@ class FrontController extends Controller {
         return view('front.agenda', $this->data);
     }
 
+    public function lokerlist() {
+        $this->data['title'] = 'Berita';
+        $this->data['beritalist'] = Models\Berita::orderBy('tanggal', 'desc')->paginate(5);
+        return view('front.beritalist', $this->data);
+    }
+
+    public function loker($id) {
+        $this->data['title'] = 'Berita';
+        $this->data['beritalist'] = Models\Berita::find($id);
+        return view('front.berita', $this->data);
+    }
     public function album() {
         $this->data['title'] = 'Album Sekolah';
         $this->data['album'] = Models\Galeri::all();

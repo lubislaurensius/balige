@@ -1,20 +1,19 @@
 @extends('backend/templates/index')
 @section('js')
-<script src='{{asset('assets/js/controller/admin-agenda.js')}}'></script>
+<script src='{{asset('assets/js/controller/admin-loker.js')}}'></script>
 @stop
 @section('content')
-<div class="main-content" ng-controller="agenda">
+<div class="main-content" ng-controller="dataloker">
     <!-- end: SPANEL CONFIGURATION MODAL FORM -->
     <div class="container">
         <!-- start: PAGE HEADER -->
         <div class="row">
             <div class="col-sm-12">
-                <!-- start: PAGE TITLE & BREADCRUMB -->
-{!! Breadcrumbs::render('agenda'); !!}
+                {!! Breadcrumbs::render('indexloker'); !!}
                 <div class="page-header">
                     <h1>
                         {{$title}} <br />
-                        <small>Tulis agenda di situs website SMA Negeri 2</small>
+                        <small>Tulis lowongan kerja di situs website SMA Negeri 2</small>
                     </h1>
                 </div>
                 <!-- end: PAGE TITLE & BREADCRUMB -->
@@ -30,7 +29,7 @@
                     </div>
                     <div class="panel-body">
                         <alert ng-repeat="alert in alerts" type="<%alert.type%>" close="closeAlert($index)"><%alert.msg%></alert>
-                        <a class="btn btn-green add-row" href="{{route('admin.agenda.create')}}">
+                        <a class="btn btn-green add-row" href="{{route('admin.loker.create')}}">
                             Add New <i class="fa fa-plus"></i>
                         </a>
                         <div class="pull-right col-sm-5">
@@ -39,22 +38,26 @@
                         <table id="sample-table-1" class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Judul Agenda</th>
-                                    <th>Tanggal Posting</th>
-                                    <th>Tempat</th>
+                                    <th>Judul Lowongan</th>
+                                    <th>Isi</th>
+                                    <th>Keterangan</th>
+                                    <th>Tanggal</th>
+                                    <th>Waktu</th>
                                     <th class="hidden-xs center">Aksi Data</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="status in data| filter:paginate">
-                                    <td><% status['tema_agenda'] %></td>
-                                    <td><% status['tgl_mulai'] %></td>
-                                    <td><% status['tempat'] %></td>
+                                    <td><% status['judul_loker'] %></td>
+                                    <td><% status['isi'] %></td>
+                                    <td><% status['keterangan'] %></td>
+                                    <td><% status['tanggal'] %></td>
+                                    <td><% status['waktu'] %></td>
                                     <td class="center">
                                         <div class="visible-md visible-lg hidden-sm hidden-xs">
-                                            <a data-original-title="Edit" data-placement="top" class="btn btn-xs btn-teal tooltips" href="{{url('admin/agenda')}}/<% status['id_agenda']%>/edit"><i class="fa fa-edit"></i></a>
-                                            <a data-original-title="Remove" data-placement="top" class="btn btn-xs btn-bricky tooltips" href="#" ng-click="delete(status['id_agenda'])"><i class="fa fa-times fa fa-white"></i></a>
+                                            <a data-original-title="Edit" data-placement="top" class="btn btn-xs btn-teal tooltips" href="{{url('admin/loker')}}/<% status['id_loker']%>/edit"><i class="fa fa-edit"></i></a>
+                                            <a data-original-title="Remove" data-placement="top" class="btn btn-xs btn-bricky tooltips" href="#" ng-click="delete(status['id_loker'])"><i class="fa fa-times fa fa-white"></i></a>
                                         </div>
                                         <div class="visible-xs visible-sm hidden-md hidden-lg">
                                             <div class="btn-group">
@@ -63,12 +66,12 @@
                                                 </a>
                                                 <ul class="dropdown-menu pull-right" role="menu">
                                                     <li role="presentation">
-                                                        <a href="{{url('admin/agenda')}}/<% status['id_data']%>/edit" tabindex="-1" role="menuitem">
+                                                        <a href="{{url('admin/loker')}}/<% status['id_data']%>/edit" tabindex="-1" role="menuitem">
                                                             <i class="fa fa-edit"></i> Edit
                                                         </a>
                                                     </li>
                                                     <li role="presentation">
-                                                        <a href="#" tabindex="-1" role="menuitem" ng-click="delete(status['id_agenda'])">
+                                                        <a href="#" tabindex="-1" role="menuitem" ng-click="delete(status['id_data'])">
                                                             <i class="fa fa-times"></i> Remove 
                                                         </a>
                                                     </li>

@@ -112,6 +112,20 @@ Breadcrumbs::register('agendaedit', function($breadcrumbs) {
     $breadcrumbs->parent('agenda');
     $breadcrumbs->push('Edit Agenda', route('admin.agenda.edit'), ['icon' => '']);
 });
+
+Breadcrumbs::register('indexloker', function($breadcrumbs) {
+    $breadcrumbs->parent('datadinamis');
+    $breadcrumbs->push('Index Lowongan Kerja', route('admin.loker.index'), ['icon' => '']);
+});
+Breadcrumbs::register('indexlokercreate', function($breadcrumbs) {
+    $breadcrumbs->parent('indexloker');
+    $breadcrumbs->push('Tambah Lowongan Kerja', route('admin.loker.create'), ['icon' => '']);
+});
+Breadcrumbs::register('indexlokeredit', function($breadcrumbs) {
+    $breadcrumbs->parent('indexloker');
+    $breadcrumbs->push('Edit Lowongan Kerja', route('admin.loker.edit'), ['icon' => '']);
+});
+
 Breadcrumbs::register('kelas', function($breadcrumbs) {
     $breadcrumbs->parent('sekolah');
     $breadcrumbs->push('Kelas', route('admin.kelas.index'), ['icon' => '']);
