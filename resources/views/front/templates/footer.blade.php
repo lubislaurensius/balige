@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
-                            <a target="_blank" href="http://facebook.com" data-original-title="Facebook">
+                            <a target="_blank" href="https://m.facebook.com/groups/smundabal/" data-original-title="Facebook">
                                 Facebook
                             </a>
                         </li>
@@ -47,6 +47,11 @@
                                 LinkedIn
                             </a>
                         </li>
+                        <li class="social-twitter tooltips" data-original-title="School" data-placement="bottom">
+                            <a target="_blank" href="http://www.sman2balige.sch.id/">
+                                SMAN 2 Balige
+                            </a>
+                        </li>                        
                     </ul>
                 </div>
             </div>
