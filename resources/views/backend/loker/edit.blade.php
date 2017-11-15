@@ -57,7 +57,7 @@
                                     <label class="col-sm-2 control-label" for="form-field-1"> Gambar </label>
                                            <div class="col-sm-9">
                                         <div class="fileupload fileupload-new" data-provides="fileupload">
-                                            <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="{{asset('upload/berita/'.$data->gambar)}}" alt=""/>
+                                            <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="{{asset('upload/loker/'.$data->gambar)}}" alt=""/>
                                             </div>
                                             <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
                                             <div>

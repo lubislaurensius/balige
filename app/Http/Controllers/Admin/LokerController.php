@@ -49,7 +49,6 @@ class LokerController extends Controller {
     public function store(LokerRequest $request) {
         $destinationPath = public_path('upload/loker');
         $data = $request->except('file');
-       
        if ($request->has('data')) {
             $data = json_decode($request->get('data'));
         }
@@ -75,6 +74,7 @@ class LokerController extends Controller {
 
         $loker->judul_loker = $data->judul_loker;
         $loker->isi = $data->isi;
+        $loker->keterangan = $data->keterangan;
         $loker->author = $this->auth->user()->username;
         $loker->counter = 0;
         if ($loker->save()) {
