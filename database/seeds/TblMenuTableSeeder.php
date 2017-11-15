@@ -10,7 +10,7 @@ class TblMenuTableSeeder extends Seeder {
 		// User::truncate();
 		Menu::create( [
 			'id'=>'1',
-			'title'=>'Profil Alumni SMAN 2 Balige',
+			'title'=>'Profil',
 			'id_parent'=>'0',
 			'level'=>0
 		] );						
@@ -82,7 +82,7 @@ class TblMenuTableSeeder extends Seeder {
 		] );						
 		Menu::create( [
 			'id'=>'4.2',
-			'title'=>'Data Prestasi ',
+			'title'=>'Data Alumni Inspiratif ',
 			'id_parent'=>'4',
 			'level'=>1
 		] );
@@ -94,58 +94,16 @@ class TblMenuTableSeeder extends Seeder {
 		] );									
 		Menu::create( [
 			'id'=>'6',
-			'title'=>'Event',
+			'title'=>'Info',
 			'id_parent'=>'0',
 			'level'=>0
 		] );						
 		Menu::create( [
 			'id'=>'6.1',
-			'title'=>'Sepak Bola',
+			'title'=>'Lowongan Kerja',
 			'id_parent'=>'6',
 			'level'=>1
-		] );						
-		Menu::create( [
-			'id'=>'6.2',
-			'title'=>'Bola Volly',
-			'id_parent'=>'6',
-			'level'=>1
-		] );						
-		Menu::create( [
-			'id'=>'6.3',
-			'title'=>'Musik',
-			'id_parent'=>'6',
-			'level'=>1
-		] );						
-		Menu::create( [
-			'id'=>'6.4',
-			'title'=>'Pencinta Alam (PA)',
-			'id_parent'=>'6',
-			'level'=>1
-		] );						
-		Menu::create( [
-			'id'=>'6.5',
-			'title'=>'Futsal',
-			'id_parent'=>'6',
-			'level'=>1
-		] );						
-		Menu::create( [
-			'id'=>'6.6',
-			'title'=>'Bola Basket',
-			'id_parent'=>'6',
-			'level'=>1
-		] );						
-		Menu::create( [
-			'id'=>'6.7',
-			'title'=>'Yoga',
-			'id_parent'=>'6',
-			'level'=>1
-		] );						
-		Menu::create( [
-			'id'=>'6.8',
-			'title'=>'Badminton',
-			'id_parent'=>'6',
-			'level'=>1
-		] );						
+		] );										
 		Menu::create( [
 			'id'=>'7',
 			'title'=>'Indexs Berita',

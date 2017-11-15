@@ -128,15 +128,15 @@ class FrontController extends Controller {
     }
 
     public function lokerlist() {
-        $this->data['title'] = 'Berita';
-        $this->data['beritalist'] = Models\Berita::orderBy('tanggal', 'desc')->paginate(5);
-        return view('front.beritalist', $this->data);
+        $this->data['title'] = 'Lowongan Kerja';
+        $this->data['lokerlist'] = Models\Loker::orderBy('tanggal', 'desc')->paginate(10);
+        return view('front.lokerlist', $this->data);
     }
 
     public function loker($id) {
-        $this->data['title'] = 'Berita';
-        $this->data['beritalist'] = Models\Berita::find($id);
-        return view('front.berita', $this->data);
+        $this->data['title'] = 'Lowongan Kerja';
+        $this->data['lokerlist'] = Models\Loker::find($id);
+        return view('front.loker', $this->data);
     }
     public function album() {
         $this->data['title'] = 'Album Sekolah';
