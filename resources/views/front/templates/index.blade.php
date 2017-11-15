@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="{{asset('front/fonts/style.css')}}">
         <link rel="stylesheet" href="{{asset('front/plugins/animate.css/animate.min.css')}}">
         <link rel="stylesheet" href="{{asset('front/css/main.css')}}">
+        <link rel="stylesheet" href="{{asset('css/ttw.css')}}">
         <link rel="stylesheet" href="{{asset('front/css/theme_blue.css')}}" type="text/css" id="skin_color">
         <!-- end: MAIN CSS -->
         <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->

@@ -1,0 +1,306 @@
+@font-face {
+ 	font-family: "Oswald ExtraLight";
+ 	src: url("/fonts/Oswald/Oswald-ExtraLight.ttf");     
+}
+
+@font-face {
+ 	font-family: "Oswald Light";
+ 	src: url("/fonts/Oswald/Oswald-Light.ttf");     
+}
+
+@font-face {
+ 	font-family: "Oswald";
+ 	src: url("/fonts/Oswald/Oswald-Regular.ttf");     
+}
+
+@font-face {
+ 	font-family: "Oswald Medium";
+ 	src: url("/fonts/Oswald/Oswald-Medium.ttf");     
+}
+
+@font-face {
+ 	font-family: "Roboto Light";
+ 	src: url("/fonts/Roboto/Roboto-Light.ttf");     
+}
+
+@font-face {
+ 	font-family: "Roboto";
+ 	src: url("/fonts/Roboto/Roboto-Regular.ttf");     
+}
+
+@font-face {
+ 	font-family: "Roboto Medium";
+ 	src: url("/fonts/Roboto/Roboto-Medium.ttf");     
+}
+
+body * {
+	font-family: 'Roboto';
+}
+
+.wrapper .container,
+.navbar-default > .container {
+    width: 100%;
+    padding: 0 50px;
+}
+
+.navbar-default > .container {
+	height: 90px;
+}
+
+.navbar-toggle {
+	margin-top: 25px;
+    margin-right: 0;
+}
+
+.navbar-default {
+    background: white;
+    height: 90px;
+    min-height: 90px;
+    line-height: 88px !important;
+	border: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+	height: 90px !important;
+    line-height: 88px !important;
+    font-size: 20px;
+    font-family: 'Oswald Light';
+    color: black;
+    letter-spacing: 0.03em;
+}
+
+.navbar > .container .navbar-brand {
+	padding: 5px;
+}
+
+.logo {
+    background: url(../images/logob.png) no-repeat center center;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-size: auto 85%;
+}
+
+.flexslider {
+	padding: 20px !important;
+    position: relative !important;
+    margin-bottom: 50px !important;
+}
+
+.flexslider .slides img {
+    width: 60% !important;
+}
+
+.flex-direction-nav {
+	display: flex;
+    position: absolute;
+    bottom: 38px;
+    left: calc(60% - 25px);
+}
+
+.flex-direction-nav .flex-prev,
+.flex-direction-nav .flex-next {
+	position: relative;
+    opacity: 1 !important;
+    padding: 15px 20px;
+    width: auto !important;
+    height: auto !important;
+    display: flex;
+    background: #000000;
+    color: #909090 !important;
+}
+
+.flex-direction-nav .flex-prev:hover,
+.flex-direction-nav .flex-next:hover {
+	color: white !important;
+}
+
+.flex-direction-nav .flex-prev:before,
+.flex-direction-nav .flex-next:before {
+	font-size: 36px !important;
+}
+
+.flex-direction-nav .flex-prev {
+	left: initial !important;
+}
+
+.flex-direction-nav .flex-next {
+	right: initial !important;
+}
+
+.flex-control-nav {
+    display: inline-block;
+    position: absolute !important;
+    bottom: 40px !important;
+    right: 30px !important;
+    width: 3px !important;
+}
+
+.flex-control-paging li {
+	margin: 0 !important;
+}
+
+.flex-control-paging li a {
+    border-radius: 5px !important;
+    height: 40px !important;
+    width: 3px !important;
+    margin: 5px 0;
+    box-shadow: none !important;
+}
+
+.flex-control-paging li a.flex-active {
+	background: black !important;
+}
+
+.flexslider .slides > li > label {
+    position: absolute;
+    top: 4%;
+    left: 64%;
+    font-size: 5em;
+    color: black;
+    z-index: 1;
+    font-family: 'Oswald';
+    letter-spacing: 5px;
+}
+
+.flexslider .slides > li > p {
+    position: absolute;
+    top: 18%;
+    left: 64%;
+    width: 30%;
+    text-align: justify;
+    font-size: 16px;
+    color: black;
+}
+
+.bg-text {
+  	display: inline-block;
+    width: 40%;
+    position: absolute;
+    top: calc(50% - 310px);
+    right: 0;
+}
+
+.bg-text label {
+    font-size: 10em;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: 'Oswald';
+    color: black;
+}
+
+.blog-posts article .flexslider {
+    border: none;
+    box-shadow: none;
+}
+
+.post-info a,
+.post-content a {
+	text-transform: capitalize;
+    font-family: 'Oswald';
+}
+
+.post-info a {
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.post-meta,
+.post-content p {
+	font-size: 16px;
+    color: black;
+    text-align: justify;
+}
+
+.post-meta * {
+	font-size: 16px;
+}
+
+.post-meta .btn {
+	background: transparent;
+    color: #006ADF;
+    border: none;
+}
+
+.blog-posts .post-image .flexslider .slides img {
+    width: 100% !important;
+}
+
+
+#scroll-top {
+    background: #000000 !important;
+    border: none !important;
+    font-size: 28px;
+    color: #909090 !important;
+}
+
+#scroll-top:hover { 
+	color: white !important;
+}
+
+@media screen and (max-width: 767px) {
+	.navbar-default .navbar-collapse, 
+	.navbar-default .navbar-form {
+		 background: white;
+	    border: 1px solid #dddddd;
+	    margin-top: 25px;
+	    border-radius: 4px;
+	}
+   
+   .navbar-default .navbar-nav > li > a {
+	   	height: auto !important;
+	    line-height: 3 !important;
+	    padding: 20px;
+   }
+
+   .flexslider {
+   		margin-top: 100px !important;
+   		padding: 0 !important;
+   }
+
+   .flexslider .slides img {
+   		width: 100% !important;
+   }
+
+   .flex-direction-nav {
+       position: absolute;
+	    top: 195px;
+	    left: calc(100% - 85px);
+   }
+
+   .flex-control-nav {
+	    right: calc(100% + 15px) !important;
+	    bottom: initial !important;
+	    top: -15px !important;
+   }
+
+   .flexslider .slides > li > label {
+   		top: initial !important;
+	    left: 0 !important;
+	    font-size: 3em;
+	    letter-spacing: 0;
+	    margin-top: 10px;
+   }
+
+	.flexslider .slides > li > p {
+		left: 0;
+	    top: initial;
+	    margin-top: 85px;
+	    width: 100%;
+	}
+
+   .bg-text {
+		position: relative;
+	    padding: 20px;
+	    width: 100%;
+   }
+
+   .bg-text label {
+   		font-size: 3em;
+   }
+
+
+}

@@ -20,10 +20,8 @@
                         <li>
                             <p>
                                 <i class="fa fa-envelope"></i><strong>Email:</strong>
-                                <a href=" parbakso20@gmail.com.com">
-                                    laurensius
-                                </a>
-                            </p>
+                               parbakso20@gmail.com
+                             </p>
                         </li>
                     </ul>
                 </div>
@@ -59,7 +57,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <a class="logo" href="{{url()}}">
-                        Alumni SMAN 2 Balige
+                       {{--  --}}
                     </a>
                 </div>
                 <div class="col-md-7">
