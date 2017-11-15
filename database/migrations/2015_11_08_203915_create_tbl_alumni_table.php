@@ -25,6 +25,10 @@ class CreateTblAlumniTable extends Migration {
 			$table->string('pekerjaan')->nullable();
 			$table->string('kontak_alumni')->nullable();
 			$table->enum('status', ['lajang', 'menikah']);
+			$table->string('hobby')->nullable();
+			$table->string('instansi')->nullable();
+			$table->string('nama_pasangan')->nullable();
+			$table->integer('jumlah_anak')->nullable();
 			$table->timestamp('created_at')->nullable();
 			$table->timestamp('updated_at')->nullable();
 		});

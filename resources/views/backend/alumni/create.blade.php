@@ -100,6 +100,30 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Hobby </label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='hobby' ng-model='data.hobby'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Instansi </label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='instansi' ng-model='data.instansi'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Nama Suami/Istri </label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='nama_pasangan' ng-model='data.nama_pasangan'/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" for="form-field-1"> Jumlah Anak </label>
+                                    <div class="col-sm-9">
+                                        <input type='text' class='col-sm-10 form-control' name='jumlah_anak' ng-model='data.jumlah_anak'/>
+                                    </div>
+                                </div>                                                                                                
+                                <div class="form-group">
                                     <label class="col-sm-2 control-label" for="form-field-1"> Nomor Kontak </label>
                                     <div class="col-sm-9">
                                         <input type='text' class='col-sm-10 form-control' name='kontak_alumni' ng-model='data.kontak_alumni'/>
