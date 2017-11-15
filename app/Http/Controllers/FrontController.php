@@ -46,13 +46,10 @@ class FrontController extends Controller {
 
     public function halaman($id) {
         switch ($id) {
-            case 3.4: return $this->dataguru();
-            case 3.5: return $this->datapegawai();
-            case 4.1: return $this->dataalumni();
-            case 5.1: return $this->absensi();
-            case 8: return $this->album();
-            case 4.3: return $this->persebaranalumni();
-            case 6.1: return $this->lokerlist();
+            case 3.1: return $this->dataalumni();
+            case 6.1: return $this->album();
+            case 3.3: return $this->persebaranalumni();
+            case 4.1: return $this->lokerlist();
         }
         $this->data['page'] = Models\Data::with('menu')->where('data_id', $id)->first();
         $this->data['title'] = $this->data['page'] ? $this->data['page']->menu->title : 'Page Tidak Ditekemukan';
