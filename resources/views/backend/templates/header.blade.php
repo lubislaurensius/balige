@@ -10,7 +10,7 @@
             <!-- end: RESPONSIVE MENU TOGGLER -->
             <!-- start: LOGO -->
             <a class="navbar-brand" href="{{url()}}">
-                SMA NEGERI 2
+                Alumni SMA NEGERI 2 Balige se-Jabodetabek
             </a>
             <!-- end: LOGO -->
         </div>
@@ -56,7 +56,7 @@
                         Data Statis   
                     </a>
                 </li>
-                <li class="{{setActive('admin.berita')}}  {{setActive('admin.pengumuman')}}  {{setActive('admin.agenda')}}">
+                <li class="{{setActive('admin.berita')}}  {{setActive('admin.pengumuman')}}  {{setActive('admin.agenda')}} {{setActive('admin.loker')}}">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown">
                         <span class="selected"></span>
                         Data Dinamis <i class="fa fa-angle-down"></i>
@@ -74,12 +74,17 @@
                         </li>
                         <li class="{{setActive('admin.agenda')}}">
                             <a href="{{route('admin.agenda.index')}}">
-                                Agenda Alumni
+                                Agenda 
+                            </a>
+                        </li>
+                        <li class="{{setActive('admin.loker')}}">
+                            <a href="{{route('admin.loker.index')}}">
+                                Lowongan Kerja 
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="{{setActive('admin.angkatan')}} {{setActive('admin.alumni')}} {{setActive('admin.pegawai')}}">
+                <li class="{{setActive('admin.angkatan')}} {{setActive('admin.alumni')}} {{setActive('admin.inspiratif')}}">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown">
                         <span class="selected"></span>
                         Alumni <i class="fa fa-angle-down"></i>
@@ -90,16 +95,11 @@
                               Data Alumni
                             </a>
                         </li>
-                        <li class="{{setActive('admin.pegawai')}}">
-                            <a href="{{route('admin.pegawai.index')}}">
-                                Data Kepegawaian
+                        <li class="{{setActive('admin.inspiratif')}}">
+                            <a href="{{route('admin.inspiratif.index')}}">
+                                Data Alumni Inspiratif
                             </a>
-                        </li>
-                        {{-- <li class="{{setActive('admin.alumni')}}">
-                            <a href="#">
-                                Data Alumni
-                            </a>
-                        </li> --}}
+                        </li>                        
                     </ul>
                 </li>
                 {{-- <li class="{{setActive('admin.polling')}}">

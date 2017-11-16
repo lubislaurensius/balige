@@ -21,7 +21,7 @@
                 <div class="core-box">
                     <div class="heading">
                         <i class="clip-user-4 circle-icon circle-green"></i>
-                        <h2>Manajemen Alumni</h2>
+                        <h2>Data Alumni</h2>
                     </div>
                     <div class="content">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -32,11 +32,28 @@
                     </a>
                 </div>
             </div>
+
+            <div class="col-sm-4">
+                <div class="core-box">
+                    <div class="heading">
+                        <i class="clip-user-4 circle-icon circle-green"></i>
+                        <h2>Alumni Inspiratif</h2>
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                    <!-- route admin.siswa.index belum terdefinisi, diubah sementara -->
+                    <a class="view-more" href="{{route('admin.inspiratif.index')}}">
+                        View More <i class="clip-arrow-right-2"></i>
+                    </a>
+                </div>
+            </div>
+
             <div class="col-sm-4">
                 <div class="core-box">
                     <div class="heading">
                         <i class="clip-clip circle-icon circle-teal"></i>
-                        <h2>Manajemen Kepegawaian</h2>
+                        <h2>Administrator</h2>
                     </div>
                     <div class="content">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
