@@ -31,6 +31,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="post-content">
+                    <h2>
+                        Ikatan Alumni SMAN 2 Balige se-Jabodetabek
+                      </h2>
+                    <p>
+                        Kami Menyambut baik terbitnya Website Alumni SMAN 2 Balige. Dengan fasilitas ini alumni dapat mengakses berbagai informasi seputar alumni. 
+                    </p>
+                </div>
+            </div>
+        </div>
     </article>
 </div>
 <hr />
