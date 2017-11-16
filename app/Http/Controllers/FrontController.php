@@ -47,9 +47,10 @@ class FrontController extends Controller {
     public function halaman($id) {
         switch ($id) {
             case 3.1: return $this->dataalumni();
-            case 6.1: return $this->album();
+            case 3.2: return $this->inspiratiflist();
             case 3.3: return $this->persebaranalumni();
             case 4.1: return $this->lokerlist();
+            case 6.1: return $this->album();
         }
         $this->data['page'] = Models\Data::with('menu')->where('data_id', $id)->first();
         $this->data['title'] = $this->data['page'] ? $this->data['page']->menu->title : 'Page Tidak Ditekemukan';
@@ -136,6 +137,19 @@ class FrontController extends Controller {
         $this->data['lokerlist'] = Models\Loker::find($id);
         return view('front.loker', $this->data);
     }
+
+    public function inspiratiflist() {
+        $this->data['title'] = 'Alumni Inspiratif';
+        $this->data['inspiratiflist'] = Models\Inspiratif::orderBy('tanggal', 'desc')->paginate(10);
+        return view('front.inspiratiflist', $this->data);
+    }
+
+    public function inspiratif($id) {
+        $this->data['title'] = 'Alumni Inspiratif';
+        $this->data['inspiratiflist'] = Models\Inspiratif::find($id);
+        return view('front.inspiratif', $this->data);
+    }
+
     public function album() {
         $this->data['title'] = 'Album Sekolah';
         $this->data['album'] = Models\Galeri::all();

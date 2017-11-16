@@ -41,7 +41,7 @@
             </div>
             <!-- start: LOGIN BOX -->
             <div>
-                <h3>Login Ke Halaman Admin/Karyawan</h3>
+                <h3>Login Ke Halaman Admin</h3>
                 <p>
                     Masukan username dan password anda
                 </p>

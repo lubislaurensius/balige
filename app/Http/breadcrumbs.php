@@ -126,6 +126,19 @@ Breadcrumbs::register('indexlokeredit', function($breadcrumbs) {
     $breadcrumbs->push('Edit Lowongan Kerja', route('admin.loker.edit'), ['icon' => '']);
 });
 
+Breadcrumbs::register('indexinspiratif', function($breadcrumbs) {
+    $breadcrumbs->parent('datadinamis');
+    $breadcrumbs->push('Index Alumni Inspiratif', route('admin.inspiratif.index'), ['icon' => '']);
+});
+Breadcrumbs::register('indexinspiratifcreate', function($breadcrumbs) {
+    $breadcrumbs->parent('indexinspiratif');
+    $breadcrumbs->push('Tambah Alumni Inspiratif', route('admin.inspiratif.create'), ['icon' => '']);
+});
+Breadcrumbs::register('indexinspiratifedit', function($breadcrumbs) {
+    $breadcrumbs->parent('indexinspiratif');
+    $breadcrumbs->push('Edit Alumni Inspiratif', route('admin.inspiratif.edit'), ['icon' => '']);
+});
+
 Breadcrumbs::register('kelas', function($breadcrumbs) {
     $breadcrumbs->parent('sekolah');
     $breadcrumbs->push('Kelas', route('admin.kelas.index'), ['icon' => '']);

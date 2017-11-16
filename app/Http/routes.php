@@ -22,6 +22,8 @@ Route::get('/agenda', 'FrontController@agendalist');
 Route::get('/agenda/{id}', 'FrontController@agenda');
 Route::get('/loker', 'FrontController@lokerlist');
 Route::get('/loker/{id}', 'FrontController@loker');
+Route::get('/inspiratif', 'FrontController@inspiratiflist');
+Route::get('/inspiratif/{id}', 'FrontController@inspiratif');
 Route::get('/galeri', 'FrontController@album');
 Route::get('/download', 'FrontController@download');
 Route::get('/galeri/{id}', 'FrontController@foto');
@@ -55,6 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::resource('pengumuman', 'Admin\PengumumanController');
     Route::resource('agenda', 'Admin\AgendaController');
     Route::resource('loker', 'Admin\LokerController');
+    Route::resource('inspiratif', 'Admin\InspiratifController');
     Route::resource('angkatan', 'Admin\AngkatanController');
     Route::resource('alumni', 'Admin\AlumniController');    
     Route::get('angkatan/{id}/alumni', 'Admin\AlumniController@listAlumniByAngkatan');
@@ -101,6 +104,9 @@ Route::group(['prefix' => 'api'], function() {
 
     Route::get('loker', 'Admin\LokerController@apiLoker');
     Route::get('loker/{id}', 'Admin\LokerController@show');
+
+    Route::get('inspiratif', 'Admin\InspiratifController@apiInspiratif');
+    Route::get('inspiratif/{id}', 'Admin\InspiratifController@show');
 
     Route::get('provinsi-list-dropdown', 'Admin\AlumniController@apiProvinsiList');
 
