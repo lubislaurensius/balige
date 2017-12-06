@@ -9,7 +9,7 @@
                     <ul class="contact">
                         <li>
                             <p>
-                                <i class="fa fa-map-marker"></i><strong>Alamat:</strong> Jalan Karet Gusuran II no.10
+                                <i class="fa fa-map-marker"></i><strong>Alamat:</strong> Jakarta
                             </p>
                         </li>
                         <li>
@@ -20,7 +20,7 @@
                         <li>
                             <p>
                                 <i class="fa fa-envelope"></i><strong>Email:</strong>
-                               parbakso20@gmail.com
+                               admin@ilunismandabaligesejabodetabek.org
                              </p>
                         </li>
                     </ul>
@@ -42,16 +42,21 @@
                                 Facebook
                             </a>
                         </li>
-                        <li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
+                       {{--  <li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
                             <a target="_blank" href="http://linkedin.com" data-original-title="LinkedIn">
                                 LinkedIn
                             </a>
-                        </li>
-                        <li class="social-twitter tooltips" data-original-title="School" data-placement="bottom">
+                        </li> --}}
+                         <li class="social-youtube tooltips" data-original-title="Video" data-placement="bottom">
+                            <a target="_blank" href="https://www.youtube.com/">
+                               Video
+                            </a>
+                        </li>   
+                        <li class="social-dribbble tooltips" data-original-title="School" data-placement="bottom">
                             <a target="_blank" href="http://www.sman2balige.sch.id/">
                                 SMAN 2 Balige
                             </a>
-                        </li>                        
+                        </li>                                             
                     </ul>
                 </div>
             </div>
