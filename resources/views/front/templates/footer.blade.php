@@ -1,9 +1,9 @@
 <footer id="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-">
             </div>
-             <div class="col-md-4">
+             <div class="col-md-5">
                 <div class="contact-details">
                     <h4>Contact Us</h4>
                     <ul class="contact">
@@ -26,9 +26,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
             </div>
-            <div class="col-md-2">
+            <div class="col-md-5">
                 <h4>&nbsp&nbspFollow Us</h4>
                 <div class="social-icons">
                     <ul>

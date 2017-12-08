@@ -13,7 +13,7 @@
                 <!-- end: RESPONSIVE MENU TOGGLER -->
                 <!-- start: LOGO -->
                 <a class="navbar-brand" href="{{url()}}">
-                    Alumni SMAN 2
+                    <img src="{{asset('upload/icon.png')}}" />
                 </a>
                 <!-- end: LOGO -->
             </div>

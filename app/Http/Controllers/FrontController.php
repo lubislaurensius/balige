@@ -46,6 +46,7 @@ class FrontController extends Controller {
 
     public function halaman($id) {
         switch ($id) {
+            case 1.3: return $this->datapengurusalumni();
             case 3.1: return $this->dataalumni();
             case 3.2: return $this->inspiratiflist();
             case 3.3: return $this->persebaranalumni();
@@ -67,6 +68,12 @@ class FrontController extends Controller {
         $siswa = Models\Absensi::getAbsen($input['kelas'],$input['bulan'],$input['tahun']);
         return response()->json($siswa);
     }
+
+    public function datapengurusalumni() {
+        $this->data['title'] = 'Data Pengurus Alumni';
+        return view('front.datapengurus', $this->data);
+    }
+
 
     public function dataalumni() {
         $this->data['title'] = 'Data Alumni';

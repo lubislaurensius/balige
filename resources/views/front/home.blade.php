@@ -10,22 +10,22 @@
                             <li>
                                 <img src="{{asset('upload/slider/head.jpg')}}" />
                                 <label class="title"></label>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Arga do bona ni pinasa di angka halak na marroha. Sai ingot ma mulak tu huta, mulak tu bona ni pinasa.</p>
                             </li>
                             <li>
                                 <img src="{{asset('upload/slider/head2.jpg')}}" />
                                 <label class="title"></label>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>Rampak borhat, rampak mulak na uju i.</p>
                             </li>
                             <li>
                                 <img src="{{asset('upload/slider/head3.jpg')}}" />
                                 <label class="title"></label>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>There are friends, there is family and then there are friends that become family.</p>
                             </li>
                             <li>
                                 <img src="{{asset('upload/slider/head4.jpg')}}" />
                                 <label class="title"></label>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p>There is no wifi in the forest but you will find a better connecction.</p>
                             </li>
                         </ul>
                     </div>
