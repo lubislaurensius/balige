@@ -14,10 +14,12 @@
     <div class="blog-posts post-page">
         <article>
             <div class="post-content">
-                <!-- <h2>{{$page->menu->title}}</h2>
+                <div class="info-table ignore-second-td">
+                        <!-- <h2>{{$page->menu->title}}</h2>
                 <div class="post-meta">
                 </div> -->
-                {!!$page->content!!}
+                    {!!$page->content!!}
+                </div>
         </article>
     </div>
 </div>

@@ -35,34 +35,36 @@
         </div>
         <div class='row' ng-show='show'>
             <br/>
-            <table id="sample-table-1" class="table table-bordered table-hover table-striped">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama</th>
-                        <th>Alamat</th>
-                        <th>Pekerjaan</th>
-                        <th>Tempat/Tanggal lahir</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="alumni in telo">
-                        <td><%$index+1%>
-                        </td>
-                        <td><%alumni['nama']%>
-                        </td>
-                        <td><%alumni['alamat']%>
-                        </td>
-                        <td><%alumni['pekerjaan']%>
-                        </td>
-                        <td><%alumni['tempat_lahir']%> / <%alumni['tanggal_lahir']%> 
-                        </td>
-                        <td><%alumni['status']%>
-                        </td>                        
-                    </tr>
-                </tbody>
-            </table>
+			<div class="table-responsive">
+				<table id="sample-table-1" class="table table-bordered table-hover table-striped">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Nama</th>
+							<th>Alamat</th>
+							<th>Pekerjaan</th>
+							<th>Tempat/Tanggal lahir</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="alumni in telo">
+							<td><%$index+1%>
+							</td>
+							<td><%alumni['nama']%>
+							</td>
+							<td><%alumni['alamat']%>
+							</td>
+							<td><%alumni['pekerjaan']%>
+							</td>
+							<td><%alumni['tempat_lahir']%> / <%alumni['tanggal_lahir']%> 
+							</td>
+							<td><%alumni['status']%>
+							</td>                        
+						</tr>
+					</tbody>
+				</table>
+			</div>
         </div>
     </div>
 </div>
