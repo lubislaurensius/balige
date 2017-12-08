@@ -249,6 +249,21 @@ body * {
   width: 100% !important;
 }
 
+ .info-table td {
+      width: 100%;
+      display: inline-block;
+   }
+
+   .info-table.ignore-second-td td:nth-of-type(2) {
+      display: none;
+   }
+
+   .info-table tr {
+      margin-bottom: 20px;
+      display: inline-block;
+      width: 100%;
+   }
+
 @media screen and (max-width: 767px) {
 	.navbar-default .navbar-collapse, 
 	.navbar-default .navbar-form {
@@ -308,20 +323,5 @@ body * {
 
    .bg-text label {
    		font-size: 3em;
-   }
-
-   .info-table td {
-      width: 100%;
-      display: inline-block;
-   }
-
-   .info-table.ignore-second-td td:nth-of-type(2) {
-      display: none;
-   }
-
-   .info-table tr {
-      margin-bottom: 20px;
-      display: inline-block;
-      width: 100%;
    }
 }
