@@ -38,10 +38,18 @@ app.filter('_uriseg', function($location, baseURL) {
 angular.module('siswa').controller('kelas', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.kelas = {};
     $scope.data = {};
+    $scope.detail = {};
     $scope.show = false;
     $http.get(baseURL.url('api/angkatandropdown')).success(function(data) {
         $scope.kelas = data;
+        console.log($scope.kelas);
     });
+
+    var vm = this;
+    vm.contacts = [];
+    vm.name = '';
+    vm.number = '';
+
     $scope.submit = function() {
         $scope.show = true;
         $http.get(baseURL.url('api/ambilalumni/' + $scope.data['id_kelas'])).success(function(e) {
@@ -49,8 +57,21 @@ angular.module('siswa').controller('kelas', function($scope, $http, $filter, $ti
             $scope.telo = e;
         })
     }
+    $scope.initView = function (id) {
+    $scope.showModal = true;
+        $http.get(baseURL.url('api/alumni/' + id)).success(function(data) {
+            console.log(data['agama']);
 
+            $scope.detail = data;
+            console.log($scope.detail);
+/*            vm.contacts.push({name: vm.name, number: vm.number});
+            vm.name = "Jerry";
+            vm.number = "08093434";
+*/        })
+        $("#detail_alumni").modal('show');        
+    }    
 });
+
 angular.module('siswa').controller('absensi', function($scope, $http, $filter, $timeout, baseURL) {
     $scope.data = {};
     $scope.show = false;
