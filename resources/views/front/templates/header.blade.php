@@ -13,7 +13,7 @@
                 <!-- end: RESPONSIVE MENU TOGGLER -->
                 <!-- start: LOGO -->
                 <a class="navbar-brand" href="{{url()}}">
-                    <img src="{{asset('upload/icon.png')}}" />
+                    <img src="{{asset('upload/icon.jpg')}}" />
                 </a>
                 <!-- end: LOGO -->
             </div>

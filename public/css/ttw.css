@@ -264,6 +264,14 @@ body * {
       width: 100%;
    }
 
+.navbar-brand img {
+    width: 200px !important;
+    height: 75px!important;
+    top: 8px;
+    padding: 0 15px !important;
+    position: absolute;
+}
+
 @media screen and (max-width: 767px) {
 	.navbar-default .navbar-collapse, 
 	.navbar-default .navbar-form {
